@@ -20,18 +20,18 @@ public class Main{
                     "                                                        |___/           \n" +
                     "   \n" +
                     "===========================================================================");
-            System.out.println("=======================|    SELECIONE UMA OP√á√ÉO    |=======================");
+            System.out.println("=======================|    SELECIONE UMA OP«√O    |=======================");
             System.out.println("===========================================================================");
             System.out.println("=======================| [1] Cadastrar hospede     |=======================");
             System.out.println("=======================| [2] Realizar reserva      |=======================");
             System.out.println("=======================| [3] Fazer check-in        |=======================");
             System.out.println("=======================| [4] Fazer check-out       |=======================");
-            System.out.println("=======================| [5] Cadastrar funcion√°rio |=======================");
+            System.out.println("=======================| [5] Cadastrar funcion·rio |=======================");
             System.out.println("=======================| [6] Cadastrar quarto      |=======================");
             System.out.println("=======================| [7] Calcular despesas     |=======================");
             System.out.println("=======================| [0]         SAIR          |=======================");
             System.out.println("===========================================================================");
-            System.out.print("Digite a op√ß√£o: ");
+            System.out.print("Digite a opÁ„o: ");
             op=reader.nextInt();
             clearConsole();
 
@@ -45,7 +45,7 @@ public class Main{
                     break;
 
                 default:
-                    System.out.println("Op√ß√£o inv√°lida! Pressione enter para digitar uma nova op√ß√£o.");
+                    System.out.println("OpÁ„o inv·lida! Pressione enter para digitar uma nova opÁ„o.");
                     reader.next();
                     clearConsole();
                     break;
@@ -64,7 +64,7 @@ public class Main{
     public static void cadastrarHospede() throws ParseException {
         HospedeModel hospede = new HospedeModel();
         clearConsole();
-        System.out.print("Nome: ");
+        System.out.print("Nome Completo do HÛspede: ");
         hospede.setNome(reader.next());
         System.out.print("CPF: ");
         hospede.setCpf(reader.nextLong());
@@ -72,11 +72,11 @@ public class Main{
         hospede.setDataNasc(formatter.parse(reader.next()));
         System.out.print("Sexo: ");
         hospede.setSexo(reader.next());
-        System.out.print("Endere√ßo: ");
+        System.out.print("EndereÁo Completo: ");
         hospede.setEndereco(reader.next());
-        System.out.print("Telefone: ");
+        System.out.print("Telefone (principal): ");
         hospede.setTelefone(reader.next());
-        System.out.print("√â estrangeiro? 'true' ou 'false': ");
+        System.out.print("Hospede È estrangeiro? digite 'true' para SIM ou 'false' para N√O: ");
         hospede.setEstrangeiro(reader.nextBoolean());
     }
 }
