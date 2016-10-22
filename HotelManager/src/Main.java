@@ -1,3 +1,4 @@
+import Model.FuncionarioModel;
 import Model.HospedeModel;
 
 import java.text.ParseException;
@@ -32,8 +33,10 @@ public class Main{
             System.out.println("=======================| [0]         SAIR          |=======================");
             System.out.println("===========================================================================");
             System.out.print("Digite a opção: ");
+            
             op=reader.nextInt();
             clearConsole();
+            
 
             switch (op){
                 case 0:
@@ -43,6 +46,11 @@ public class Main{
                     cadastrarHospede();
                     clearConsole();
                     break;
+                    
+                case 5:
+                	cadastrarFuncionario();
+                	clearConsole();
+                	break;
 
                 default:
                     System.out.println("Opção inválida! Pressione enter para digitar uma nova opção.");
@@ -76,7 +84,31 @@ public class Main{
         hospede.setEndereco(reader.next());
         System.out.print("Telefone (principal): ");
         hospede.setTelefone(reader.next());
-        System.out.print("Hospede é estrangeiro? digite 'true' para SIM ou 'false' para NÃO: ");
+        System.out.print("Hospede é estrangeiro? digite 'true' para SIM ou 'false' para NÃO. ");
         hospede.setEstrangeiro(reader.nextBoolean());
+    }
+    
+    public static void cadastrarFuncionario() throws ParseException {
+        FuncionarioModel funcionario = new FuncionarioModel();
+        clearConsole();
+        System.out.print("Nome Completo do Funcionário: ");
+        funcionario.setNome(reader.next());
+        System.out.print("CPF: ");
+        funcionario.setCpf(reader.nextLong());
+        System.out.print("Data de nascimento (DD-MM-AAAA): ");
+        funcionario.setDataNasc(formatter.parse(reader.next()));
+        System.out.print("Sexo: ");
+        funcionario.setSexo(reader.next());
+        System.out.print("Endereço Completo: ");
+        funcionario.setEndereco(reader.next());
+        System.out.print("Telefone (principal): ");
+        funcionario.setTelefone(reader.next());
+        System.out.print("Código de Identificação: ");
+        funcionario.setCodigo(reader.nextLong());
+        System.out.print("Salario");
+        funcionario.setSalario(reader.nextLong());
+        System.out.print("É administrador do Sistema? digite 'true' para SIM ou 'false' para NÃO. ");
+        funcionario.setAdmin(reader.nextBoolean());
+       
     }
 }
