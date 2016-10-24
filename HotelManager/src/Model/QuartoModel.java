@@ -1,7 +1,7 @@
 package Model;
 
 public class QuartoModel {
-    private long numero;
+    private int numero;
     private int andar;
     private boolean isSuiteEspecial;
     private int qtdCamasSolteiro;
@@ -14,7 +14,7 @@ public class QuartoModel {
         return numero;
     }
 
-    public void setNumero(long numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 

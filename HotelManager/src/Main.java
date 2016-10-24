@@ -1,5 +1,6 @@
 import Model.FuncionarioModel;
 import Model.HospedeModel;
+import Model.QuartoModel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -51,6 +52,10 @@ public class Main{
                 	cadastrarFuncionario();
                 	clearConsole();
                 	break;
+                	
+                case 6:
+                	cadastrarQuarto();
+                	clearConsole();
 
                 default:
                     System.out.println("Opção inválida! Pressione enter para digitar uma nova opção.");
@@ -110,5 +115,31 @@ public class Main{
         System.out.print("É administrador do Sistema? digite 'true' para SIM ou 'false' para NÃO. ");
         funcionario.setAdmin(reader.nextBoolean());
        
+    }
+    
+    public static void cadastrarQuarto() throws ParseException{
+    	QuartoModel quarto = new QuartoModel();
+    	
+    	System.out.print("Número do Quarto: ");
+    	quarto.setNumero(reader.nextInt());
+    	
+    	System.out.println("Andar: ");
+    	quarto.setAndar(reader.nextInt());
+    	
+    	System.out.println("Quantidade de Camas de Casal: ");
+    	quarto.setQtdCamasCasal(reader.nextInt());
+    	
+    	System.out.println("Quantidade de Camas de Solteiro: ");
+    	quarto.setQtdCamasSolteiro(reader.nextInt());
+    	
+    	System.out.println("É uma Suíte Especial? digite 'true' para SIM ou 'false' para NÃO. ");
+    	quarto.setSuiteEspecial(reader.nextBoolean());
+    	
+    	System.out.print("Valor da Diária do Quarto: ");
+    	quarto.setValorDiaria(reader.nextDouble());
+    	
+    	System.out.println("Área do Quarto (m²): ");
+    	quarto.setAreaM2(reader.nextLong());
+    	
     }
 }
