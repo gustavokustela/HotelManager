@@ -65,6 +65,8 @@ public class Main{
             }
         }while(op!=0);
     }
+    
+    
 
     private static void clearConsole(){
         char c = '\n';
@@ -74,51 +76,73 @@ public class Main{
         System.out.print(String.valueOf(chars));
     }
 
+    
+    
     public static void cadastrarHospede() throws ParseException {
         HospedeModel hospede = new HospedeModel();
         clearConsole();
+        
         System.out.print("Nome Completo do Hóspede: ");
         hospede.setNome(reader.next());
+        
         System.out.print("CPF: ");
         hospede.setCpf(reader.nextLong());
+        
         System.out.print("Data de nascimento (DD-MM-AAAA): ");
         hospede.setDataNasc(formatter.parse(reader.next()));
+       
         System.out.print("Sexo: ");
         hospede.setSexo(reader.next());
+        
         System.out.print("Endereço Completo: ");
         hospede.setEndereco(reader.next());
+        
         System.out.print("Telefone (principal): ");
         hospede.setTelefone(reader.next());
+        
         System.out.print("Hospede é estrangeiro? digite 'true' para SIM ou 'false' para NÃO. ");
         hospede.setEstrangeiro(reader.nextBoolean());
     }
     
+    
+    
     public static void cadastrarFuncionario() throws ParseException {
         FuncionarioModel funcionario = new FuncionarioModel();
         clearConsole();
+        
         System.out.print("Nome Completo do Funcionário: ");
         funcionario.setNome(reader.next());
+        
         System.out.print("CPF: ");
         funcionario.setCpf(reader.nextLong());
+        
         System.out.print("Data de nascimento (DD-MM-AAAA): ");
         funcionario.setDataNasc(formatter.parse(reader.next()));
+        
         System.out.print("Sexo: ");
         funcionario.setSexo(reader.next());
+        
         System.out.print("Endereço Completo: ");
         funcionario.setEndereco(reader.next());
+        
         System.out.print("Telefone (principal): ");
         funcionario.setTelefone(reader.next());
+        
         System.out.print("Código de Identificação: ");
         funcionario.setCodigo(reader.nextLong());
+        
         System.out.print("Salario");
         funcionario.setSalario(reader.nextLong());
+        
         System.out.print("É administrador do Sistema? digite 'true' para SIM ou 'false' para NÃO. ");
-        funcionario.setAdmin(reader.nextBoolean());
-       
+        funcionario.setAdmin(reader.nextBoolean());       
     }
+    
+    
     
     public static void cadastrarQuarto() throws ParseException{
     	QuartoModel quarto = new QuartoModel();
+    	clearConsole();
     	
     	System.out.print("Número do Quarto: ");
     	quarto.setNumero(reader.nextInt());
@@ -139,7 +163,6 @@ public class Main{
     	quarto.setValorDiaria(reader.nextDouble());
     	
     	System.out.println("Área do Quarto (m²): ");
-    	quarto.setAreaM2(reader.nextLong());
-    	
+    	quarto.setAreaM2(reader.nextLong());    	
     }
 }
