@@ -147,7 +147,7 @@ public class Main{
     public static void cadastrarQuarto() throws ParseException{
     	QuartoModel quarto = new QuartoModel();
     	//clearConsole();
-    	System.out.print("=======================| Cadastro de Quartos |=======================\n");
+    	System.out.print("=======================| Cadastro de Quartos |========================\n");
     	
     	System.out.print("\nNúmero do Quarto: ");
     	quarto.setNumero(reader.nextInt());
