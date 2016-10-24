@@ -24,16 +24,16 @@ public class Main{
                     "===========================================================================");
             System.out.println("=======================|    SELECIONE UMA OPÇÃO    |=======================");
             System.out.println("===========================================================================");
-            System.out.println("=======================| [1] Cadastrar hospede     |=======================");
-            System.out.println("=======================| [2] Realizar reserva      |=======================");
-            System.out.println("=======================| [3] Fazer check-in        |=======================");
-            System.out.println("=======================| [4] Fazer check-out       |=======================");
-            System.out.println("=======================| [5] Cadastrar funcionário |=======================");
-            System.out.println("=======================| [6] Cadastrar quarto      |=======================");
-            System.out.println("=======================| [7] Calcular despesas     |=======================");
-            System.out.println("=======================| [0]         SAIR          |=======================");
+            System.out.println("=======================| [1] Cadastrar Hóspede     |=======================");
+            System.out.println("=======================| [2] Realizar Reserva      |=======================");
+            System.out.println("=======================| [3] Fazer Check-in        |=======================");
+            System.out.println("=======================| [4] Fazer Check-out       |=======================");
+            System.out.println("=======================| [5] Calcular Despesas     |=======================");
+            System.out.println("=======================| [6] Cadastrar Funcionário |=======================");
+            System.out.println("=======================| [7] Cadastrar Quarto      |=======================");
+            System.out.println("=======================| [0]       SAIR            |=======================");
             System.out.println("===========================================================================");
-            System.out.print("Digite a opção: ");
+            System.out.print("Digite a opção desejada: ");
             
             op=reader.nextInt();
             clearConsole();
@@ -48,12 +48,12 @@ public class Main{
                     clearConsole();
                     break;
                     
-                case 5:
+                case 6:
                 	cadastrarFuncionario();
                 	clearConsole();
                 	break;
                 	
-                case 6:
+                case 7:
                 	cadastrarQuarto();
                 	clearConsole();
 
@@ -80,9 +80,11 @@ public class Main{
     
     public static void cadastrarHospede() throws ParseException {
         HospedeModel hospede = new HospedeModel();
-        clearConsole();
+        //clearConsole();
         
-        System.out.print("Nome Completo do Hóspede: ");
+        System.out.print("=======================| Cadastro de Hóspedes |=======================\n");
+        
+        System.out.print("\nNome Completo do Hóspede: ");
         hospede.setNome(reader.next());
         
         System.out.print("CPF: ");
@@ -108,9 +110,11 @@ public class Main{
     
     public static void cadastrarFuncionario() throws ParseException {
         FuncionarioModel funcionario = new FuncionarioModel();
-        clearConsole();
+        //clearConsole();
         
-        System.out.print("Nome Completo do Funcionário: ");
+        System.out.print("=======================| Cadastro de Funcionários |=======================\n");
+        
+        System.out.print("\nNome Completo do Funcionário: ");
         funcionario.setNome(reader.next());
         
         System.out.print("CPF: ");
@@ -135,16 +139,17 @@ public class Main{
         funcionario.setSalario(reader.nextLong());
         
         System.out.print("É administrador do Sistema? digite 'true' para SIM ou 'false' para NÃO. ");
-        funcionario.setAdmin(reader.nextBoolean());       
+        funcionario.setAdmin(reader.nextBoolean());
     }
     
     
     
     public static void cadastrarQuarto() throws ParseException{
     	QuartoModel quarto = new QuartoModel();
-    	clearConsole();
+    	//clearConsole();
+    	System.out.print("=======================| Cadastro de Quartos |=======================\n");
     	
-    	System.out.print("Número do Quarto: ");
+    	System.out.print("\nNúmero do Quarto: ");
     	quarto.setNumero(reader.nextInt());
     	
     	System.out.println("Andar: ");
@@ -163,6 +168,6 @@ public class Main{
     	quarto.setValorDiaria(reader.nextDouble());
     	
     	System.out.println("Área do Quarto (m²): ");
-    	quarto.setAreaM2(reader.nextLong());    	
+    	quarto.setAreaM2(reader.nextLong());
     }
 }
