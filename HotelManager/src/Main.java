@@ -243,7 +243,7 @@ public class Main{
     }
 
     public static void listarQuartos() throws IOException {
-        System.out.print("\n=======================| Funcionarios quartos |========================\n");
+        System.out.print("\n=======================| Quartos Cadastrados |========================\n");
         
         for(QuartoModel quarto:quartos){
             System.out.println(quarto.getAndar()+"º andar");
