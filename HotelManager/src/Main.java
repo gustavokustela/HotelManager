@@ -100,7 +100,7 @@ public class Main{
 
         System.out.print("\n=======================| Cadastro de Hospedes |=======================\n");
 
-        System.out.print("\nNome completo do hospede: ");
+        System.out.print("Nome completo do hospede: ");
         hospede.setNome(reader.next());
 
         System.out.print("CPF: ");
@@ -131,7 +131,7 @@ public class Main{
 
         System.out.print("\n=======================| Cadastro de Funcionarios |=======================\n");
 
-        System.out.print("\nNome completo do funcionario: ");
+        System.out.print("Nome completo do funcionario: ");
         funcionario.setNome(reader.next());
 
         System.out.print("CPF: ");
@@ -159,15 +159,14 @@ public class Main{
         funcionario.setAdmin(reader.nextBoolean());
 
         funcionarios.add(funcionario);
-
         clearConsole();
     }
-
+    
     public static void cadastrarQuarto() throws ParseException{
     	QuartoModel quarto = new QuartoModel();
     	System.out.print("\n=======================| Cadastro de Quartos |========================\n");
 
-    	System.out.print("\nNumero do quarto: ");
+    	System.out.print("Numero do quarto: ");
     	quarto.setNumero(reader.nextInt());
 
     	System.out.println("Andar: ");
@@ -189,12 +188,12 @@ public class Main{
     	quarto.setAreaM2(reader.nextLong());
 
         quartos.add(quarto);
-
         clearConsole();
     }
-
+    
     public static void listarHospedes() throws IOException {
-        System.out.print("\n=======================| Hospedes cadastrados |========================");
+        System.out.print("\n=======================| Hospedes cadastrados |========================\n");
+        
         for(HospedeModel hospede:hospedes){
             System.out.println("Nome: "+hospede.getNome());
             System.out.println("CPF: "+hospede.getCpf());
@@ -202,11 +201,13 @@ public class Main{
             System.out.println("Sexo: "+hospede.getSexo());
             System.out.println("Endereco: "+hospede.getEndereco());
             System.out.println("Telefone: "+hospede.getTelefone());
+            
             if(hospede.isEstrangeiro()==true){
                 System.out.println("Estrangeiro");
             } else {
                 System.out.println("Nao e estrangeiro");
             }
+            
             System.out.println("Numero de estadas: "+hospede.getQtdEstadas());
             System.out.println("=======================================================================");
             System.out.println("Pressione uma tecla para continuar");
@@ -216,7 +217,8 @@ public class Main{
     }
 
     public static void listarFuncionarios() throws IOException {
-        System.out.print("\n=======================| Funcionarios cadastrados |========================");
+        System.out.print("\n=======================| Funcionarios cadastrados |========================\n");
+        
         for(FuncionarioModel funcionario:funcionarios){
             System.out.println("Nome: "+funcionario.getNome());
             System.out.println("Codigo: "+funcionario.getCodigo());
@@ -226,11 +228,13 @@ public class Main{
             System.out.println("Endereco: "+funcionario.getEndereco());
             System.out.println("Telefone: "+funcionario.getTelefone());
             System.out.println("Salario: "+funcionario.getSalario());
+            
             if(funcionario.isAdmin()==true){
                 System.out.println("E administrador do sistema");
             }else{
                 System.out.println("Nao e administrador do sistema");
             }
+            
             System.out.println("=======================================================================");
             System.out.println("Pressione uma tecla para continuar");
             System.in.read();
@@ -239,19 +243,22 @@ public class Main{
     }
 
     public static void listarQuartos() throws IOException {
-        System.out.print("\n=======================| Funcionarios quartos |========================");
+        System.out.print("\n=======================| Funcionarios quartos |========================\n");
+        
         for(QuartoModel quarto:quartos){
-            System.out.println(quarto.getAndar()+"o andar");
+            System.out.println(quarto.getAndar()+"º andar");
             System.out.println("Numero: "+quarto.getNumero());
             System.out.println("Camas de casal: "+quarto.getQtdCamasCasal());
             System.out.println("Camas de solteiro: "+quarto.getQtdCamasSolteiro());
             System.out.println("Valor da diaria: R$"+quarto.getValorDiaria());
             System.out.println(quarto.getAreaM2()+" metros quadrados");
+            
             if(quarto.isSuiteEspecial()==true){
                 System.out.println("Suite especial");
             }else {
                 System.out.println("Nao e suite especial");
             }
+            
             System.out.println("=======================================================================");
             System.out.println("Pressione uma tecla para continuar");
             System.in.read();
