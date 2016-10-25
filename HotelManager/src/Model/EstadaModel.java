@@ -10,6 +10,11 @@ public class EstadaModel {
     private Date dataCheckOut;
     private boolean isReserva;
 
+    //Constructor
+    EstadaModel(){
+        dataCheckIn = new Date();
+    }
+
     //Getters and setters
     public long getCodigoIdentificacao() {
         return codigoIdentificacao;

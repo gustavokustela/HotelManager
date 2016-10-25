@@ -10,7 +10,7 @@ public class QuartoModel {
     private double valorDiaria;
 
     //Getters and setters
-    public long getNumero() {
+    public int getNumero() {
         return numero;
     }
 

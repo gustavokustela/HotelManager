@@ -26,7 +26,7 @@ public class FuncionarioModel extends PessoaModel{
     }
 
     public void setSalario(long salario) {
-        this.salario = salario < 0 ? salario : 0;
+        this.salario = salario;
     }
 
     public boolean isAdmin() {
@@ -41,7 +41,14 @@ public class FuncionarioModel extends PessoaModel{
         System.out.println("Reserva realizada!");
     }
 
-    public void realizarCheckin(HospedeModel hospede){
+    public void realizarCheckin(HospedeModel hospede, QuartoModel quarto){
+        EstadaModel estada = new EstadaModel();
+        estada.setHospede(hospede);
+        estada.setQuarto(quarto);
+        System.out.print("Digite o codigo de identificacao da estada: ");
+        estada.setCodigoIdentificacao(reader.nextLong());
+        System.out.println("E reserva? Digite 'true' para SIM  e 'false' para NAO: ");
+        estada.setReserva(reader.nextBoolean());
         System.out.println("Checkin realizado!");
     }
 
@@ -83,5 +90,63 @@ public class FuncionarioModel extends PessoaModel{
         funcionario.setAdmin(reader.nextBoolean());
 
         return funcionario;
+    }
+
+    public QuartoModel cadastrarQuarto(){
+        QuartoModel quarto = new QuartoModel();
+        System.out.print("\n=======================| Cadastro de Quartos |========================\n");
+
+        System.out.print("Numero do quarto: ");
+        quarto.setNumero(reader.nextInt());
+
+        System.out.print("Andar: ");
+        quarto.setAndar(reader.nextInt());
+
+        System.out.print("Quantidade de camas de casal: ");
+        quarto.setQtdCamasCasal(reader.nextInt());
+
+        System.out.print("Quantidade de camas de solteiro: ");
+        quarto.setQtdCamasSolteiro(reader.nextInt());
+
+        System.out.print("E uma suite especial? Digite 'true' para SIM ou 'false' para NAO: ");
+        quarto.setSuiteEspecial(reader.nextBoolean());
+
+        System.out.print("Valor da diaria do quarto: ");
+        quarto.setValorDiaria(reader.nextDouble());
+
+        System.out.print("Area do quarto (m2): ");
+        quarto.setAreaM2(reader.nextLong());
+
+        return quarto;
+    }
+
+    public HospedeModel cadastrarHospede() throws ParseException {
+        HospedeModel hospede = new HospedeModel();
+
+        System.out.print("\n=======================| Cadastro de Hospedes |=======================\n");
+
+        System.out.print("Nome completo do hospede: ");
+        hospede.setNome(reader.nextLine());
+
+        System.out.print("CPF: ");
+        hospede.setCpf(reader.nextLong());
+
+        System.out.print("Data de nascimento (DD-MM-AAAA): ");
+        hospede.setDataNasc(formatter.parse(reader.next()));
+
+        System.out.print("Sexo: ");
+        hospede.setSexo(reader.next());
+
+        System.out.print("Endereco completo: ");
+        reader.nextLine();
+        hospede.setEndereco(reader.nextLine());
+
+        System.out.print("Telefone (principal): ");
+        hospede.setTelefone(reader.next());
+
+        System.out.print("Hospede e estrangeiro? digite 'true' para SIM ou 'false' para NAO: ");
+        hospede.setEstrangeiro(reader.nextBoolean());
+
+        return hospede;
     }
 }
