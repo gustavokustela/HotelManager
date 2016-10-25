@@ -11,12 +11,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main{
+    private static boolean firstUser = true;
     private static Scanner reader = new Scanner(System.in);
     private static SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
     private static List<HospedeModel> hospedes = new ArrayList<HospedeModel>();
     private static List<FuncionarioModel> funcionarios = new ArrayList<FuncionarioModel>();
     private static List<QuartoModel> quartos = new ArrayList<QuartoModel>();
-
+    private static long cod;
     public static void main(String[] args) throws ParseException, IOException {
         int op = -1;
         do {
@@ -61,8 +62,23 @@ public class Main{
                     listarHospedes();
                     break;
 
+                case 3:
+                    realizarAcao(1);
+                    break;
+
+                case 4:
+                    realizarAcao(2);
+                    break;
+
+                case 5:
+                    realizarAcao(3);
+                    break;
+
+                case 6:
+                    break;
+
                 case 7:
-                	cadastrarFuncionario();
+                    realizarAcao(4);
                 	break;
 
                 case 8:
@@ -101,7 +117,8 @@ public class Main{
         System.out.print("\n=======================| Cadastro de Hospedes |=======================\n");
 
         System.out.print("Nome completo do hospede: ");
-        hospede.setNome(reader.next());
+        reader.nextLine();
+        hospede.setNome(reader.nextLine());
 
         System.out.print("CPF: ");
         hospede.setCpf(reader.nextLong());
@@ -113,7 +130,8 @@ public class Main{
         hospede.setSexo(reader.next());
 
         System.out.print("Endereco completo: ");
-        hospede.setEndereco(reader.next());
+        reader.nextLine();
+        hospede.setEndereco(reader.nextLine());
 
         System.out.print("Telefone (principal): ");
         hospede.setTelefone(reader.next());
@@ -126,42 +144,6 @@ public class Main{
         clearConsole();
     }
 
-    public static void cadastrarFuncionario() throws ParseException {
-        FuncionarioModel funcionario = new FuncionarioModel();
-
-        System.out.print("\n=======================| Cadastro de Funcionarios |=======================\n");
-
-        System.out.print("Nome completo do funcionario: ");
-        funcionario.setNome(reader.next());
-
-        System.out.print("CPF: ");
-        funcionario.setCpf(reader.nextLong());
-
-        System.out.print("Data de nascimento (DD-MM-AAAA): ");
-        funcionario.setDataNasc(formatter.parse(reader.next()));
-
-        System.out.print("Sexo: ");
-        funcionario.setSexo(reader.next());
-
-        System.out.print("Endereco completo: ");
-        funcionario.setEndereco(reader.next());
-
-        System.out.print("Telefone (principal): ");
-        funcionario.setTelefone(reader.next());
-
-        System.out.print("Codigo de identificacao: ");
-        funcionario.setCodigo(reader.nextLong());
-
-        System.out.print("Salario: ");
-        funcionario.setSalario(reader.nextLong());
-
-        System.out.print("E administrador do sistema? digite 'true' para SIM ou 'false' para NAO: ");
-        funcionario.setAdmin(reader.nextBoolean());
-
-        funcionarios.add(funcionario);
-        clearConsole();
-    }
-    
     public static void cadastrarQuarto() throws ParseException{
     	QuartoModel quarto = new QuartoModel();
     	System.out.print("\n=======================| Cadastro de Quartos |========================\n");
@@ -169,31 +151,31 @@ public class Main{
     	System.out.print("Numero do quarto: ");
     	quarto.setNumero(reader.nextInt());
 
-    	System.out.println("Andar: ");
+    	System.out.print("Andar: ");
     	quarto.setAndar(reader.nextInt());
 
-    	System.out.println("Quantidade de camas de casal: ");
+    	System.out.print("Quantidade de camas de casal: ");
     	quarto.setQtdCamasCasal(reader.nextInt());
 
-    	System.out.println("Quantidade de camas de solteiro: ");
+    	System.out.print("Quantidade de camas de solteiro: ");
     	quarto.setQtdCamasSolteiro(reader.nextInt());
 
-    	System.out.println("E uma suite especial? Digite 'true' para SIM ou 'false' para NAO: ");
+    	System.out.print("E uma suite especial? Digite 'true' para SIM ou 'false' para NAO: ");
     	quarto.setSuiteEspecial(reader.nextBoolean());
 
     	System.out.print("Valor da diaria do quarto: ");
     	quarto.setValorDiaria(reader.nextDouble());
 
-    	System.out.println("Area do quarto (m2): ");
+    	System.out.print("Area do quarto (m2): ");
     	quarto.setAreaM2(reader.nextLong());
 
         quartos.add(quarto);
         clearConsole();
     }
-    
+
     public static void listarHospedes() throws IOException {
         System.out.print("\n=======================| Hospedes cadastrados |========================\n");
-        
+
         for(HospedeModel hospede:hospedes){
             System.out.println("Nome: "+hospede.getNome());
             System.out.println("CPF: "+hospede.getCpf());
@@ -201,24 +183,23 @@ public class Main{
             System.out.println("Sexo: "+hospede.getSexo());
             System.out.println("Endereco: "+hospede.getEndereco());
             System.out.println("Telefone: "+hospede.getTelefone());
-            
+
             if(hospede.isEstrangeiro()==true){
                 System.out.println("Estrangeiro");
             } else {
                 System.out.println("Nao e estrangeiro");
             }
-            
             System.out.println("Numero de estadas: "+hospede.getQtdEstadas());
-            System.out.println("=======================================================================");
-            System.out.println("Pressione uma tecla para continuar");
-            System.in.read();
-            clearConsole();
         }
+        System.out.println("=======================================================================");
+        System.out.println("Pressione uma tecla para continuar");
+        System.in.read();
+        clearConsole();
     }
 
     public static void listarFuncionarios() throws IOException {
         System.out.print("\n=======================| Funcionarios cadastrados |========================\n");
-        
+
         for(FuncionarioModel funcionario:funcionarios){
             System.out.println("Nome: "+funcionario.getNome());
             System.out.println("Codigo: "+funcionario.getCodigo());
@@ -228,41 +209,138 @@ public class Main{
             System.out.println("Endereco: "+funcionario.getEndereco());
             System.out.println("Telefone: "+funcionario.getTelefone());
             System.out.println("Salario: "+funcionario.getSalario());
-            
+
             if(funcionario.isAdmin()==true){
                 System.out.println("E administrador do sistema");
             }else{
                 System.out.println("Nao e administrador do sistema");
             }
-            
-            System.out.println("=======================================================================");
-            System.out.println("Pressione uma tecla para continuar");
-            System.in.read();
-            clearConsole();
         }
+        System.out.println("=======================================================================");
+        System.out.println("Pressione uma tecla para continuar");
+        System.in.read();
+        clearConsole();
     }
 
     public static void listarQuartos() throws IOException {
         System.out.print("\n=======================| Quartos Cadastrados |========================\n");
-        
+
         for(QuartoModel quarto:quartos){
-            System.out.println(quarto.getAndar()+"� andar");
+            System.out.println(quarto.getAndar()+"o andar");
             System.out.println("Numero: "+quarto.getNumero());
             System.out.println("Camas de casal: "+quarto.getQtdCamasCasal());
             System.out.println("Camas de solteiro: "+quarto.getQtdCamasSolteiro());
             System.out.println("Valor da diaria: R$"+quarto.getValorDiaria());
             System.out.println(quarto.getAreaM2()+" metros quadrados");
-            
+
             if(quarto.isSuiteEspecial()==true){
                 System.out.println("Suite especial");
             }else {
                 System.out.println("Nao e suite especial");
             }
-            
-            System.out.println("=======================================================================");
-            System.out.println("Pressione uma tecla para continuar");
-            System.in.read();
-            clearConsole();
         }
+        System.out.println("=======================================================================");
+        System.out.println("Pressione uma tecla para continuar");
+        System.in.read();
+        clearConsole();
+    }
+
+    public static void realizarAcao(Integer acao) throws IOException, ParseException {
+        HospedeModel hospede = new HospedeModel();
+        FuncionarioModel funcionario = new FuncionarioModel();
+            switch (acao){
+                case 1:
+                    if(isFuncionario()) {
+                        if (isHospede())
+                            funcionario.realizarReserva(hospede);
+                        else
+                            System.out.println("Hospede nao encontrado");
+                    }else System.out.println("Acesso negado!");
+                    break;
+                case 2:
+                    if(isFuncionario()) {
+                        if (isHospede())
+                            funcionario.realizarCheckin(hospede);
+                        else
+                            System.out.println("Hospede nao encontrado");
+                    }else System.out.println("Acesso negado!");
+
+                    break;
+                case 3:
+                    if(isFuncionario()) {
+                        if (isHospede())
+                            funcionario.realizarCheckout(hospede);
+                        else
+                            System.out.println("Hospede nao encontrado");
+                    }else System.out.println("Acesso negado!");
+                    break;
+                case 4:
+                    if (firstUser){
+                        funcionarios.add(funcionario.cadastrarFuncionario());
+                    }else{
+                        if(verificaAdm(getFuncionario(cod))){
+                            funcionarios.add(funcionario.cadastrarFuncionario());
+                        }else {
+                            System.out.println("Acesso negado!");
+                        }
+                    }
+                    break;
+            }
+        System.out.println("=======================================================================");
+        System.out.println("Pressione uma tecla para continuar");
+        System.in.read();
+        clearConsole();
+    }
+
+    public static boolean isFuncionario(){
+        boolean is = false;
+        FuncionarioModel funcionario = new FuncionarioModel();
+        System.out.print("Digite o seu codigo de identificacao: ");
+        funcionario.setCodigo(reader.nextLong());
+        for (FuncionarioModel func:funcionarios){
+            if(func.getCodigo()==funcionario.getCodigo()){
+                is=true;
+                cod=func.getCodigo();
+            }
+        }
+        return is;
+    }
+
+    public static boolean isHospede(){
+        boolean isHosp = false;
+        HospedeModel hospede = new HospedeModel();
+        System.out.print("Digite o nome do hospede: ");
+        reader.nextLine();
+        hospede.setNome(reader.nextLine());
+        for (HospedeModel hosp:hospedes){
+            if(hosp.getNome().equals(hospede.getNome())){
+                isHosp=true;
+            }
+        }
+        return isHosp;
+    }
+
+    public static FuncionarioModel getFuncionario(Long cod){
+        FuncionarioModel funcionario = new FuncionarioModel();
+        funcionario.setCodigo(cod);
+        if(isFuncionario()){
+            for (FuncionarioModel func:funcionarios){
+                if(func.getCodigo()==funcionario.getCodigo()){
+                    return func;
+                }
+            }
+        }else {
+            System.out.println("Não é funcionario!");
+        }
+        return null;
+    }
+
+    public static boolean verificaAdm(FuncionarioModel func){
+        if(isFuncionario()){
+            return getFuncionario(func.getCodigo()).isAdmin();
+        }else{
+            System.out.println("Acesso negado!");
+        }
+        return false;
     }
 }
