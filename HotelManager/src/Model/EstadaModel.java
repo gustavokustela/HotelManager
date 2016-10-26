@@ -11,7 +11,7 @@ public class EstadaModel {
     private boolean isReserva;
 
     //Constructor
-    EstadaModel(){
+    public EstadaModel(){
         dataCheckIn = new Date();
     }
 
@@ -62,5 +62,17 @@ public class EstadaModel {
 
     public void setReserva(boolean reserva) {
         isReserva = reserva;
+    }
+
+    public double calcularDespesa(){
+        if(dataCheckOut!=null){
+            double despesa = quarto.getValorDiaria();
+            if(dataCheckOut.getDay()-dataCheckIn.getDay()>1){
+                despesa += (dataCheckOut.getDay()-dataCheckIn.getDay())*quarto.getValorDiaria();
+            }
+            return despesa;
+        } else{
+            return 0;
+        }
     }
 }

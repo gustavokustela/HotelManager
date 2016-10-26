@@ -22,9 +22,11 @@ public class Main{
     private static List<EstadaModel> estadas = new ArrayList<EstadaModel>();
     private static HospedeModel hospede = new HospedeModel();
     private static FuncionarioModel funcionario = new FuncionarioModel();
+    private static EstadaModel estada = new EstadaModel();
     private static long cod;
     private static int num;
     private static long cpf;
+    private static long estCod;
     public static void main(String[] args) throws ParseException, IOException {
         int op = -1;
         do {
@@ -49,7 +51,7 @@ public class Main{
             System.out.println("=======================| [8] Listar funcionarios   |=======================");
             System.out.println("=======================| [9] Cadastrar quarto      |=======================");
             System.out.println("=======================| [10] Listar quartos       |=======================");
-            System.out.println("=======================| [11] Listar estadas ativas|=======================");
+            System.out.println("=======================| [11] Listar estadas       |=======================");
             System.out.println("=======================| [0]       SAIR            |=======================");
             System.out.println("===========================================================================");
             System.out.print("Digite a opcao desejada: ");
@@ -117,19 +119,34 @@ public class Main{
 
                 case 5:
                     if(isFuncionario()) {
-                        if (isHospede()){
-                            funcionario.realizarCheckout(hospede);
+                        if(isEstada()){
+                            funcionario.realizarCheckout(getEstada(estCod));
+                        }else {
+                            System.out.println("Codigo de estada nao existe");
                         }
-                        else{
-                            System.out.println("Hospede nao encontrado");
-                        }
-                    }else{
+                        estCod=-1;
+                    }else {
                         System.out.println("Acesso negado!");
                     }
                     rodape();
                     break;
 
                 case 6:
+                    if(isFuncionario()) {
+                        if(isEstada()){
+                            if(getEstada(estCod).calcularDespesa()!=0){
+                                System.out.println("Despesas: R$"+getEstada(estCod).calcularDespesa());
+                            }else{
+                                System.out.println("Impossivel realizar calculo. Hospede ainda nao realizou checkout");
+                            }
+                        }else {
+                            System.out.println("Codigo de estada nao existe");
+                        }
+                        estCod=-1;
+                    }else {
+                        System.out.println("Acesso negado!");
+                    }
+                    rodape();
                     break;
 
                 case 7:
@@ -280,10 +297,23 @@ public class Main{
         System.out.print("\n=======================| Estadas ativas |========================\n");
 
         for(EstadaModel estada:estadas){
+            if(estada.getDataCheckOut()!=null){
+                System.out.println("=========================== INATIVO =============================");
+            }else {
+                System.out.println("============================ ATIVO ==============================");
+            }
             System.out.println("Codigo de identificacao: "+estada.getCodigoIdentificacao());
             System.out.println("Nome do hospede: "+estada.getHospede().getNome());
             System.out.println("Quarto numero "+estada.getQuarto().getNumero()+", "+estada.getQuarto().getAndar()+"o andar");
             System.out.println("Check-in feito em: "+formatterTime.format(estada.getDataCheckIn()));
+            if(estada.isReserva()==true){
+                System.out.println("Reservado com antecendencia");
+            }else{
+                System.out.println("Nao reservado com antecendencia");
+            }
+            if(estada.getDataCheckOut()!=null){
+                System.out.println("Check-out feito em: "+formatterTime.format(estada.getDataCheckOut()));
+            }
             System.out.println("====================================================================");
         }
         System.out.println("Pressione uma tecla para continuar");
@@ -362,6 +392,32 @@ public class Main{
         for (QuartoModel quar:quartos){
             if(quar.getNumero()==quarto.getNumero()){
                 return quar;
+            }
+        }
+        return null;
+    }
+
+    public static boolean isEstada(){
+        boolean is = false;
+        EstadaModel estada = new EstadaModel();
+        System.out.print("Digite o codigo de identificacao da estada: ");
+        estada.setCodigoIdentificacao(reader.nextLong());
+        for (EstadaModel est:estadas){
+            if(est.getCodigoIdentificacao()==estada.getCodigoIdentificacao()){
+                is=true;
+                estCod=est.getCodigoIdentificacao();
+                return is;
+            }
+        }
+        return is;
+    }
+
+    public static EstadaModel getEstada(Long codigo){
+        EstadaModel estada = new EstadaModel();
+        estada.setCodigoIdentificacao(codigo);
+        for (EstadaModel est:estadas){
+            if(est.getCodigoIdentificacao()==estada.getCodigoIdentificacao()){
+                return est;
             }
         }
         return null;
