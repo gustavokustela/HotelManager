@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class PessoaModel {
     private String nome;
-    private Long cpf;
-    private Date dataNasc;
+    private long cpf;
+    private String dataNasc;
     private String endereco;
     private String telefone;
     private String sexo;
@@ -19,19 +19,19 @@ public class PessoaModel {
         this.nome = nome;
     }
 
-    public Long getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(Long cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 
-    public Date getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 

@@ -41,7 +41,7 @@ public class FuncionarioModel extends PessoaModel{
         System.out.println("Reserva realizada!");
     }
 
-    public void realizarCheckin(HospedeModel hospede, QuartoModel quarto){
+    public EstadaModel realizarCheckin(HospedeModel hospede, QuartoModel quarto){
         EstadaModel estada = new EstadaModel();
         estada.setHospede(hospede);
         estada.setQuarto(quarto);
@@ -50,6 +50,7 @@ public class FuncionarioModel extends PessoaModel{
         System.out.println("E reserva? Digite 'true' para SIM  e 'false' para NAO: ");
         estada.setReserva(reader.nextBoolean());
         System.out.println("Checkin realizado!");
+        return estada;
     }
 
     public void realizarCheckout(HospedeModel hospede){
@@ -62,23 +63,27 @@ public class FuncionarioModel extends PessoaModel{
         System.out.print("\n=======================| Cadastro de Funcionarios |=======================\n");
 
         System.out.print("Nome completo do funcionario: ");
+        reader.next();
         funcionario.setNome(reader.nextLine());
 
         System.out.print("CPF: ");
         funcionario.setCpf(reader.nextLong());
 
         System.out.print("Data de nascimento (DD-MM-AAAA): ");
-        funcionario.setDataNasc(formatter.parse(reader.next()));
+        reader.next();
+        funcionario.setDataNasc(reader.nextLine());
 
         System.out.print("Sexo: ");
-        funcionario.setSexo(reader.next());
+        reader.next();
+        funcionario.setSexo(reader.nextLine());
 
         System.out.print("Endereco completo: ");
-        reader.nextLine();
+        reader.next();
         funcionario.setEndereco(reader.nextLine());
 
         System.out.print("Telefone (principal): ");
-        funcionario.setTelefone(reader.next());
+        reader.next();
+        funcionario.setTelefone(reader.nextLine());
 
         System.out.print("Codigo de identificacao: ");
         funcionario.setCodigo(reader.nextLong());
@@ -126,23 +131,27 @@ public class FuncionarioModel extends PessoaModel{
         System.out.print("\n=======================| Cadastro de Hospedes |=======================\n");
 
         System.out.print("Nome completo do hospede: ");
+        reader.next();
         hospede.setNome(reader.nextLine());
 
         System.out.print("CPF: ");
         hospede.setCpf(reader.nextLong());
 
         System.out.print("Data de nascimento (DD-MM-AAAA): ");
-        hospede.setDataNasc(formatter.parse(reader.next()));
+        reader.next();
+        hospede.setDataNasc(reader.nextLine());
 
         System.out.print("Sexo: ");
-        hospede.setSexo(reader.next());
+        reader.next();
+        hospede.setSexo(reader.nextLine());
 
         System.out.print("Endereco completo: ");
-        reader.nextLine();
+        reader.next();
         hospede.setEndereco(reader.nextLine());
 
         System.out.print("Telefone (principal): ");
-        hospede.setTelefone(reader.next());
+        reader.next();
+        hospede.setTelefone(reader.nextLine());
 
         System.out.print("Hospede e estrangeiro? digite 'true' para SIM ou 'false' para NAO: ");
         hospede.setEstrangeiro(reader.nextBoolean());
