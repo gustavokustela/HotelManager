@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class Main{
     private static boolean firstUser = true;
     private static Scanner reader = new Scanner(System.in);
-    private static SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
-    private static SimpleDateFormat formatterTime = new SimpleDateFormat("dd-mm-yyyy hh:mm");
+    private static SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+    private static SimpleDateFormat formatterTime = new SimpleDateFormat("dd-MM-yyyy hh:mm");
     private static List<HospedeModel> hospedes = new ArrayList<HospedeModel>();
     private static List<FuncionarioModel> funcionarios = new ArrayList<FuncionarioModel>();
     private static List<QuartoModel> quartos = new ArrayList<QuartoModel>();
