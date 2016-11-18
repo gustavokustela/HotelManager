@@ -1,6 +1,6 @@
 package Control;
 
-import Model.FuncionarioDAO;
+import DAO.FuncionarioDAO;
 
 /**
  * Created by Gabriel Quadrado on 23/09/2016.

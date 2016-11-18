@@ -1,6 +1,6 @@
 package Control;
 
-import Model.QuartoDAO;
+import DAO.QuartoDAO;
 
 /**
  * Created by Gabriel Quadrado on 23/09/2016.

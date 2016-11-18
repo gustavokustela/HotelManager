@@ -1,4 +1,6 @@
-package Model;
+package DAO;
+
+import Model.EstadaModel;
 
 public class EstadaDAO {
     public void create(EstadaModel estada){}

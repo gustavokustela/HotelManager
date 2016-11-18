@@ -1,4 +1,6 @@
-package Model;
+package DAO;
+
+import Model.FuncionarioModel;
 
 public class FuncionarioDAO {
     public void create(FuncionarioModel funcionario){}

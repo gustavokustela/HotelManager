@@ -1,4 +1,6 @@
-package Model;
+package DAO;
+
+import Model.HospedeModel;
 
 public class HospedeDAO {
     public void create(HospedeModel hospede){}

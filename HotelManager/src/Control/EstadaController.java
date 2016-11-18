@@ -1,6 +1,6 @@
 package Control;
 
-import Model.EstadaDAO;
+import DAO.EstadaDAO;
 
 /**
  * Created by Gabriel Quadrado on 23/09/2016.

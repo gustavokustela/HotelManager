@@ -1,4 +1,6 @@
-package Model;
+package DAO;
+
+import Model.QuartoModel;
 
 public class QuartoDAO {
     public void create(QuartoModel quarto){}

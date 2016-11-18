@@ -1,6 +1,6 @@
 package Control;
 
-import Model.HospedeDAO;
+import DAO.HospedeDAO;
 
 /**
  * Created by Gabriel Quadrado on 23/09/2016.
