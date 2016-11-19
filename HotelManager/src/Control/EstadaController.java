@@ -1,13 +1,32 @@
 package Control;
-
 import DAO.EstadaDAO;
+import Model.EstadaModel;
 
-/**
- * Created by Gabriel Quadrado on 23/09/2016.
- */
 public class EstadaController {
-    public void create(EstadaDAO estadaDAO){}
-    public EstadaDAO  read(){return new EstadaDAO();}
-    public void update(EstadaDAO estadaDAO){}
-    public void delete(EstadaDAO estadaDAO){}
+    public void create(EstadaModel estada){
+        EstadaDAO estadaDAO = new EstadaDAO();
+        estadaDAO.create(estada);
+    }
+    public EstadaModel read(Long id){
+        EstadaDAO estadaDAO = new EstadaDAO();
+        EstadaModel estada = estadaDAO.read(id);
+        return estada;
+    }
+    public void update(EstadaModel toNew){
+        EstadaDAO estadaDAO = new EstadaDAO();
+        EstadaModel current = read(toNew.getCodigoIdentificacao());
+        current = merge(current, toNew);
+        estadaDAO.update(current);
+    }
+    public void delete(Long id){
+        EstadaDAO estadaDAO = new EstadaDAO();
+        EstadaModel estada = read(id);
+        estadaDAO.delete(estada);
+    }
+
+    public EstadaModel merge(EstadaModel current, EstadaModel toNew){
+        current.setQuarto(toNew.getQuarto());
+        current.setReserva(toNew.isReserva());
+        return current;
+    }
 }
