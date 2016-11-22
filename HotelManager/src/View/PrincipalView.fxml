@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="1215.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Hospedes">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Gerenciar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Quartos">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Gerenciar" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Usuarios">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Gerenciar" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatorio">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Estadas" />
+                  <MenuItem mnemonicParsing="false" text="Reservas" />
+                  <MenuItem mnemonicParsing="false" text="Despesas" />
+                  <MenuItem mnemonicParsing="false" text="Quartos" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <MenuBar layoutX="1213.0" prefHeight="32.0" prefWidth="67.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Sair" />
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
