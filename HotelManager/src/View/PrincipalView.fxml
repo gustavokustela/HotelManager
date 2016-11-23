@@ -45,7 +45,7 @@
       </MenuBar>
       <ImageView id="imgFundoPrinciapl" fitHeight="690.0" fitWidth="1280.0" layoutY="32.0" pickOnBounds="true">
          <image>
-            <Image url="@Imagens/3840x2160-sketches_architecture-21835.jpg" />
+            <Image url="@Imagens/HotelBellSystem.png" />
          </image>
       </ImageView>
    </children>
