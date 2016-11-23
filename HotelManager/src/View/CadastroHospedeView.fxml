@@ -6,10 +6,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastroHospedeViewController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroHospedeViewController">
    <children>
       <TextField id="nomeHosp" layoutX="34.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
-      <Label layoutX="101.0" layoutY="20.0" text="Cadastro de Hóspedes">
+      <Label id="titleCadastroDeHospedes" layoutX="101.0" layoutY="20.0" text="Cadastro de Hóspedes">
          <font>
             <Font size="42.0" />
          </font>
@@ -17,8 +17,8 @@
       <TextField id="rgHosp" layoutX="274.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="RG" />
       <TextField id="endLogradouroHosp" layoutX="34.0" layoutY="422.0" prefHeight="31.0" prefWidth="668.0" promptText="Rua, Avenida, Alamenda..." />
       <TextField id="cpfHosp" layoutX="543.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="CPF" />
-      <Label layoutX="34.0" layoutY="95.0" text="Dados Pessoais" />
-      <Label layoutX="34.0" layoutY="393.0" text="Dados de Endereço" />
+      <Label id="lblDadosPessoais" layoutX="34.0" layoutY="95.0" text="Dados Pessoais" />
+      <Label id="lblDadosDeEndereco" layoutX="34.0" layoutY="393.0" text="Dados de Endereço" />
       <TextField id="dtNascHosp" layoutX="34.0" layoutY="168.0" prefHeight="31.0" prefWidth="206.0" promptText="Data de Nascimento" />
       <TextField id="nedNrHosp" layoutX="712.0" layoutY="422.0" prefHeight="31.0" prefWidth="78.0" promptText="Número" />
       <Separator layoutX="21.0" layoutY="375.0" prefHeight="21.0" prefWidth="790.0" />
@@ -29,13 +29,13 @@
       <TextField id="telHosp" layoutX="30.0" layoutY="297.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone" />
       <TextField id="emailHosp" layoutX="30.0" layoutY="340.0" prefHeight="31.0" prefWidth="668.0" promptText="E-mail" />
       <Separator layoutX="17.0" layoutY="250.0" prefHeight="21.0" prefWidth="790.0" />
-      <Label layoutX="34.0" layoutY="272.0" text="Dados de Contato" />
-      <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="20.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+      <Label id="lblDadosDeContato" layoutX="34.0" layoutY="272.0" text="Dados de Contato" />
+      <ImageView id="imgIconCadastroDeHospedes" fitHeight="71.0" fitWidth="71.0" layoutX="20.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/user%20(1).png" />
          </image>
       </ImageView>
-      <CheckBox id="isEstrangeiroHosp" layoutX="274.0" layoutY="218.0" mnemonicParsing="false" text="Hóspede Estrangeiro" />
+      <CheckBox id="checkBoxIsEstrangeiroHosp" layoutX="274.0" layoutY="218.0" mnemonicParsing="false" text="Hóspede Estrangeiro" />
       <Button id="btnFinalCadHosp" layoutX="467.0" layoutY="525.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="179.0" text="Finalizar Cadastro">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
