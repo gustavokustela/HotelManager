@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="mainLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="mainLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.LoginViewController">
    <children>
       <TextField id="txtUserName" layoutX="96.0" layoutY="187.0" prefHeight="31.0" prefWidth="245.0" promptText="Usuario" />
       <PasswordField id="txtPassword" layoutX="96.0" layoutY="239.0" prefHeight="31.0" prefWidth="245.0" promptText="Senha" />

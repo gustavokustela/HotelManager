@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="MainGerenciarHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GerenciarHospedesViewController">
+<Pane id="MainGerenciarHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GerenciarHospedesViewController">
    <children>
       <Button id="btnRealizarReserva" layoutX="31.0" layoutY="594.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="193.0" text="Realizar Reserva">
          <graphic>

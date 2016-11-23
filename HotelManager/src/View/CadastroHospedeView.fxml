@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="mainCadastroDeHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroHospedeViewController">
+<Pane id="mainCadastroDeHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastroHospedeViewController">
    <children>
       <TextField id="nomeHosp" layoutX="34.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
       <Label id="titleCadastroDeHospedes" layoutX="21.0" layoutY="21.0" text="Cadastro de Hóspedes">
