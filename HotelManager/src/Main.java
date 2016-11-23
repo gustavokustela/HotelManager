@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -14,10 +15,10 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            StackPane page = (StackPane) FXMLLoader.load(Main.class.getResource("../../JavaFX.fxml"));
-            Scene scene = new Scene(page);
+            Pane root = FXMLLoader.load(getClass().getResource("/View/PrincipalView.fxml"));
+            Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("FXML is Simple");
+            primaryStage.setTitle("HotelManager");
             primaryStage.show();
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
