@@ -9,7 +9,7 @@
 <Pane id="mainCadastroDeHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroHospedeViewController">
    <children>
       <TextField id="nomeHosp" layoutX="34.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
-      <Label id="titleCadastroDeHospedes" layoutX="101.0" layoutY="20.0" text="Cadastro de Hóspedes">
+      <Label id="titleCadastroDeHospedes" layoutX="21.0" layoutY="21.0" text="Cadastro de Hóspedes">
          <font>
             <Font size="42.0" />
          </font>
@@ -30,7 +30,7 @@
       <TextField id="emailHosp" layoutX="30.0" layoutY="340.0" prefHeight="31.0" prefWidth="668.0" promptText="E-mail" />
       <Separator layoutX="17.0" layoutY="250.0" prefHeight="21.0" prefWidth="790.0" />
       <Label id="lblDadosDeContato" layoutX="34.0" layoutY="272.0" text="Dados de Contato" />
-      <ImageView id="imgIconCadastroDeHospedes" fitHeight="71.0" fitWidth="71.0" layoutX="20.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="imgIconCadastroDeHospedes" fitHeight="102.0" fitWidth="102.0" layoutX="698.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/user%20(1).png" />
          </image>
