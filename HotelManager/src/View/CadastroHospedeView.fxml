@@ -36,7 +36,7 @@
          </image>
       </ImageView>
       <CheckBox id="checkBoxIsEstrangeiroHosp" fx:id="checkBoxIsEstrangeiroHosp" layoutX="274.0" layoutY="218.0" mnemonicParsing="false" text="Hóspede Estrangeiro" />
-      <Button id="btnFinalCadHosp" fx:id="btnFinalCadHosp" layoutX="467.0" layoutY="525.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="179.0" text="Finalizar Cadastro">
+      <Button id="btnFinalCadHosp" fx:id="btnFinalCadHosp" layoutX="467.0" layoutY="525.0" mnemonicParsing="false" onAction="#finalizarCadastro" prefHeight="56.0" prefWidth="179.0" text="Finalizar Cadastro">
          <graphic>
             <ImageView id="imgFinalBtn" fx:id="imgFinalBtn" fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -46,7 +46,7 @@
          </graphic>
       </Button>
       <Separator id="sepBotton" fx:id="sepBotton" layoutX="21.0" layoutY="499.0" prefHeight="21.0" prefWidth="790.0" />
-      <Button id="btnCancelCadHosp" fx:id="btnCancelCadHosp" layoutX="185.0" layoutY="525.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="179.0" text="Cancelar" />
+      <Button id="btnCancelCadHosp" fx:id="btnCancelCadHosp" layoutX="185.0" layoutY="525.0" mnemonicParsing="false" onAction="#cancelarCadastro" prefHeight="56.0" prefWidth="179.0" text="Cancelar" />
       <ImageView id="imgCancelBtn" fx:id="imgCancelBtn" fitHeight="33.0" fitWidth="44.0" layoutX="207.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/cancel.png" />
