@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -7,7 +9,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Gerenciar Usuários">
+      <Label layoutX="86.0" layoutY="14.0" text="Gerenciar Usuários">
          <font>
             <Font size="42.0" />
          </font>
@@ -18,8 +20,25 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button layoutX="928.0" layoutY="606.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="142.0" text="Atualizar Dados" />
-      <Button layoutX="384.0" layoutY="90.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="142.0" text="Buscar" />
+      <Button alignment="BASELINE_RIGHT" layoutX="896.0" layoutY="606.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="174.0" text="Atualizar Dados">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagens/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="BASELINE_LEFT" layoutX="391.0" layoutY="90.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="125.0" text="Buscar" />
       <TextField layoutX="31.0" layoutY="95.0" prefHeight="38.0" prefWidth="337.0" promptText="Nome, Código ou CPF" />
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="466.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/loupe.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="96.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/staff.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
