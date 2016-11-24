@@ -2,6 +2,8 @@ package Control;
 import DAO.HospedeDAO;
 import Model.HospedeModel;
 
+import java.util.List;
+
 public class HospedeController {
     HospedeDAO hospedeDAO = new HospedeDAO();
     public void create(HospedeModel estada){
@@ -30,5 +32,9 @@ public class HospedeController {
         current.setTelefone(toNew.getTelefone());
         current.setSexo(toNew.getSexo());
         return current;
+    }
+
+    public List<HospedeModel> list(){
+        return hospedeDAO.list();
     }
 }

@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.Date;
-
 public class PessoaModel {
     private String nome;
     private String cpf;

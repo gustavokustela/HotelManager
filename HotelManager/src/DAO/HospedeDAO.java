@@ -56,9 +56,9 @@ public class HospedeDAO {
         try {
             Connection conn = dbc.openConnection();
             Statement stmt = conn.createStatement();
-            String sql = "select * from pessoa p left join hospede h on h.codigoHospede=p.codigo and isActive=true";
+            String sql = "select * from hospede h, pessoa p where h.codigoHospede=p.codigo and p.isActive=true";
             ResultSet rs = stmt.executeQuery(sql);
-            if(rs.next()){
+            while(rs.next()){
                 HospedeModel hospede = new HospedeModel();
                 hospede.setNome(rs.getString("nome"));
                 hospede.setCpf(rs.getString("cpf"));

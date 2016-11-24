@@ -29,7 +29,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TableView id="infoTable" layoutX="31.0" layoutY="153.0" prefHeight="417.0" prefWidth="1039.0">
+      <TableView id="infoTable" fx:id="tableHospedes" layoutX="31.0" layoutY="153.0" prefHeight="417.0" prefWidth="1039.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
@@ -43,7 +43,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button id="btnAtualizarDados" layoutX="877.0" layoutY="594.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
+      <Button id="btnAtualizarDados" layoutX="877.0" layoutY="594.0" mnemonicParsing="false" onAction="#loadTable" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
