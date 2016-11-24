@@ -73,7 +73,7 @@ public class FuncionarioModel extends PessoaModel{
         funcionario.setNome(reader.nextLine());
 
         System.out.print("CPF: ");
-        funcionario.setCpf(reader.nextLong());
+        funcionario.setCpf(reader.nextLine());
         reader.nextLine();
 
         System.out.print("Data de nascimento (DD-MM-AAAA): ");
@@ -136,7 +136,7 @@ public class FuncionarioModel extends PessoaModel{
         hospede.setNome(reader.nextLine());
 
         System.out.print("CPF: ");
-        hospede.setCpf(reader.nextLong());
+        hospede.setCpf(reader.nextLine());
         reader.nextLine();
 
         System.out.print("Data de nascimento (DD-MM-AAAA): ");
