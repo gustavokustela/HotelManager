@@ -10,12 +10,18 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.sun.prism.Image;
 
 public class GerenciarHospedesViewController implements Initializable {
     HospedeController hospedeController = new HospedeController();
@@ -28,12 +34,7 @@ public class GerenciarHospedesViewController implements Initializable {
     TableColumn telCol = new TableColumn("Telefone");
     TableColumn sexoCol = new TableColumn("Sexo");
     TableColumn estCol = new TableColumn("Estadas");
-
-    @FXML
-    private TableView<HospedeModel> tableHospedes;
-
-    @FXML
-    private Button btnAtualizarDados;
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -55,4 +56,49 @@ public class GerenciarHospedesViewController implements Initializable {
         tableHospedes.setItems(data);
         tableHospedes.getColumns().addAll(nameCol, cpfCol, rgCol, nascCol, endCol, telCol, sexoCol, estCol);
     }
+    
+    @FXML
+    private Pane MainGerenciarHospedes;
+    
+    @FXML
+    private Label titleGerenciarHospedes;
+    
+    @FXML
+    private TextField txtBoxPesquisa;
+
+    @FXML
+    private TableView<HospedeModel> tableHospedes;
+    
+    @FXML
+    private Button btnBusca;
+
+    @FXML
+    private Button btnAtualizarDados;
+    
+    @FXML
+    private Button btnRealizarReserva;
+    
+    @FXML
+    private Button btnRealizarCheckIn;
+    
+    @FXML
+    private Button btnRealizarCheckOut;
+    
+    @FXML
+    private ImageView imgBtnBusca;
+    
+    @FXML
+    private ImageView imgBtnRealReserva;
+    
+    @FXML
+    private ImageView imgBtnCheckIn;
+    
+    @FXML
+    private ImageView imgBtnCheckOut;
+    
+    @FXML
+    private ImageView imgBtnAtualDados;
+    
+    @FXML
+    private ImageView imgGerenciarHospedes;
 }
