@@ -6,32 +6,32 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="MainRelatorio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RelatorioViewController">
+<Pane id="mainRelatorio" fx:id="mainRelatorio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RelatorioViewController">
    <children>
-      <Button id="btnRelHospedes" layoutX="124.0" layoutY="204.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="222.0" text="Hóspedes" />
-      <Button id="btnRelDespesas" layoutX="124.0" layoutY="281.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="222.0" text="Despesas" />
-      <Button id="btnRelQuartos" layoutX="124.0" layoutY="363.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="222.0" text="Quartos" />
-      <Label id="titleCadastroRelatorio" layoutX="143.0" layoutY="129.0" text="Relatórios">
+      <Button id="btnRelHospedes" fx:id="btnRelHospedes" layoutX="124.0" layoutY="204.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="222.0" text="Hóspedes" />
+      <Button id="btnRelDespesas" fx:id="btnRelDespesas" layoutX="124.0" layoutY="281.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="222.0" text="Despesas" />
+      <Button id="btnRelQuartos" fx:id="btnRelQuartos" layoutX="124.0" layoutY="363.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="222.0" text="Quartos" />
+      <Label id="titleCadastroRelatorio" fx:id="titleCadastroRelatorio" layoutX="143.0" layoutY="129.0" text="Relatórios">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <ImageView id="imgRelatorioTitle" fitHeight="115.0" fitWidth="115.0" layoutX="178.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="imgRelatorioTitle" fx:id="imgRelatorioTitle" fitHeight="115.0" fitWidth="115.0" layoutX="178.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/analytics.png" />
          </image>
       </ImageView>
-      <ImageView id="imgRelatorioHospede" fitHeight="52.0" fitWidth="52.0" layoutX="51.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="imgRelatorioHospede" fx:id="imgRelatorioHospede" fitHeight="52.0" fitWidth="52.0" layoutX="51.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/guest.png" />
          </image>
       </ImageView>
-      <ImageView id="imgRelatorioDespesa" fitHeight="52.0" fitWidth="52.0" layoutX="51.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="imgRelatorioDespesa" fx:id="imgRelatorioDespesa" fitHeight="52.0" fitWidth="52.0" layoutX="51.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/contract.png" />
          </image>
       </ImageView>
-      <ImageView id="imgRelatorioQuarto" fitHeight="52.0" fitWidth="52.0" layoutX="51.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="imgRelatorioQuarto" fx:id="imgRelatorioQuarto" fitHeight="52.0" fitWidth="52.0" layoutX="51.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/door.png" />
          </image>
