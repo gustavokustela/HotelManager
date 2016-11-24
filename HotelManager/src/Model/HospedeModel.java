@@ -3,6 +3,7 @@ package Model;
 public class HospedeModel extends PessoaModel{
     private boolean isEstrangeiro;
     private int qtdEstadas;
+    private String email;
 
     //Getters and setters
     public boolean isEstrangeiro() {
@@ -19,5 +20,13 @@ public class HospedeModel extends PessoaModel{
 
     public void setQtdEstadas(int qtdEstadas) {
         this.qtdEstadas = qtdEstadas;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

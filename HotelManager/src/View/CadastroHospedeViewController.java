@@ -1,14 +1,15 @@
 package View;
 
+import Model.HospedeModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import Control.HospedeController;
 
 public class CadastroHospedeViewController {
-
-	//Declaracao de recursos (elementos) disponiveis para a tela de Cadastro de Hospede	
-
+    HospedeController hospedeController = new HospedeController();
+	//Declaracao de recursos (elementos) disponiveis para a tela de Cadastro de Hospede
 	@FXML
 	private Pane mainCadastroDeHospedes;
 	
@@ -96,6 +97,31 @@ public class CadastroHospedeViewController {
 	
 	@FXML
 	public void finalizarCadastro(){
-		
+		if(!txtNomeHosp.getText().isEmpty() && !txtDtNascHosp.getText().isEmpty() &&
+				!txtRgHosp.getText().isEmpty() && !txtCpfHosp.getText().isEmpty() &&
+				!txtSexoHosp.getText().isEmpty() && !txtTelHosp.getText().isEmpty() &&
+				!txtEmailHosp.getText().isEmpty() && !txtEndLogradouroHosp.getText().isEmpty() &&
+				!txtEndNrHosp.getText().isEmpty() && !txtEndBairroHosp.getText().isEmpty() &&
+				!txtEndCidadeHosp.getText().isEmpty() && !txtEndEstadoHosp.getText().isEmpty())
+		{
+            HospedeModel hospede = new HospedeModel();
+            hospede.setNome(txtNomeHosp.getText());
+            hospede.setDataNasc(txtDtNascHosp.getText());
+            hospede.setRG(txtRgHosp.getText());
+            hospede.setCpf(txtCpfHosp.getText());
+            hospede.setSexo(txtSexoHosp.getText());
+            hospede.setTelefone(txtTelHosp.getText());
+            hospede.setEmail(txtEmailHosp.getText());
+            hospede.setEndereco(txtEndLogradouroHosp.getText() + ", " +
+            txtEndNrHosp.getText() + ", " + txtEndBairroHosp.getText() + ", " +
+            txtEndCidadeHosp.getText() + ", " + txtEndEstadoHosp.getText());
+            hospedeController.create(hospede);
+		}else{
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+			alert.setTitle("Atenção");
+			alert.setHeaderText(null);
+			alert.setContentText("Digite todos os campos");
+			alert.showAndWait();
+		}
 	}
 }

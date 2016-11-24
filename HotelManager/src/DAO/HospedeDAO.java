@@ -3,10 +3,7 @@ package DAO;
 import Model.FuncionarioModel;
 import Model.HospedeModel;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +13,16 @@ public class HospedeDAO {
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
+            String sql = "insert into hospede " +
+                    "(id, nome, idade, sexo, status) " +
+                    "values (?,?,?,?,?);";
+            /*PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, null);
+            stmt.setString(2, h.getNome());
+            stmt.setString(3, Integer.toString(h.getIdade()));
+            stmt.setString(4, h.getSexo());
+            stmt.setString(5, h.getStatus());
+            boolean res = stmt.execute();*/
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
