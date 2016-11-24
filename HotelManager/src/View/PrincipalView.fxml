@@ -46,8 +46,8 @@
          <children>
             <Pane id="mainLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="400.0">
                <children>
-                  <TextField id="txtUserName" layoutX="96.0" layoutY="187.0" prefHeight="31.0" prefWidth="245.0" promptText="Usuario" />
-                  <PasswordField id="txtPassword" layoutX="96.0" layoutY="239.0" prefHeight="31.0" prefWidth="245.0" promptText="Senha" />
+                  <TextField id="txtUserName" fx:id="txtUser" layoutX="96.0" layoutY="187.0" prefHeight="31.0" prefWidth="245.0" promptText="Usuario" />
+                  <PasswordField id="txtPassword" fx:id="txtPassword" layoutX="96.0" layoutY="239.0" prefHeight="31.0" prefWidth="245.0" promptText="Senha" />
                   <Label id="titleLoginView" layoutX="65.0" layoutY="117.0" text="Hotel Manager">
                      <font>
                         <Font size="42.0" />

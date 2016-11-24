@@ -3,7 +3,10 @@ package View;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
@@ -20,9 +23,18 @@ public class PrincipalViewController {
     @FXML
     private MenuBar menuBar;
 
+    @FXML
+    private TextField txtUser;
+
+    @FXML
+    private PasswordField txtPassword;
+
+    @FXML
     public void login() throws IOException {
-        menuBar.setDisable(false);
-        principalPane.getChildren().clear();
+        if(!txtUser.getText().isEmpty() && !txtPassword.getText().isEmpty()){
+            menuBar.setDisable(false);
+            principalPane.getChildren().clear();
+        }
     }
 
     @FXML

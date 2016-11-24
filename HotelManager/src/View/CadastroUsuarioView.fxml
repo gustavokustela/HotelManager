@@ -26,11 +26,11 @@
       <TextField id="txtBoxEndCidade" layoutX="499.0" layoutY="429.0" prefHeight="31.0" prefWidth="196.0" promptText="Cidade" />
       <TextField id="txtBoxEndEstado" layoutX="708.0" layoutY="429.0" prefHeight="31.0" prefWidth="111.0" promptText="Estado" />
       <TextField id="txtBoxSexoUser" layoutX="58.0" layoutY="213.0" prefHeight="31.0" prefWidth="206.0" promptText="Sexo" />
-      <TextField id="txtBoxTelefoneUser" layoutX="55.0" layoutY="297.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone Principal" />
-      <Separator layoutX="39.0" layoutY="250.0" prefHeight="21.0" prefWidth="803.0" />
-      <Label id="lblDadosDeContato" layoutX="59.0" layoutY="270.0" text="Dados de Contato" />
-      <TextField id="txtBoxSalarioUser" layoutX="568.0" layoutY="213.0" prefHeight="31.0" prefWidth="176.0" promptText="Salário" />
-      <CheckBox id="checkBoxIsAdminSistema" layoutX="299.0" layoutY="218.0" mnemonicParsing="false" text="Administrador do Sistema" />
+      <TextField id="txtBoxTelefoneUser" layoutX="491.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone Principal" />
+      <Separator layoutX="33.0" layoutY="263.0" prefHeight="21.0" prefWidth="803.0" />
+      <Label id="lblDadosDeContato" layoutX="59.0" layoutY="284.0" text="Dados de Login" />
+      <TextField id="txtBoxSalarioUser" layoutX="299.0" layoutY="214.0" prefHeight="31.0" prefWidth="176.0" promptText="Salário" />
+      <CheckBox id="checkBoxIsAdminSistema" layoutX="705.0" layoutY="221.0" mnemonicParsing="false" text="Administrador" />
       <Separator layoutX="52.0" layoutY="467.0" prefHeight="21.0" prefWidth="803.0" />
       <ImageView id="imgCadastroUser" fitHeight="104.0" fitWidth="102.0" layoutX="708.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -52,5 +52,7 @@
             </ImageView>
          </graphic>
       </Button>
+      <TextField id="txtBoxSexoUser" layoutX="57.0" layoutY="308.0" prefHeight="31.0" prefWidth="206.0" promptText="Usuario" />
+      <PasswordField layoutX="300.0" layoutY="307.0" prefHeight="31.0" prefWidth="170.0" promptText="Senha" />
    </children>
 </Pane>
