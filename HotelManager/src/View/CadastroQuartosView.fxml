@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="mainCadastroDeQuartos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="v">
+<Pane id="mainCadastroDeQuartos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.PrincipalViewController">
    <children>
       <TextField id="txtBoxNumero" layoutX="84.0" layoutY="138.0" prefHeight="31.0" prefWidth="117.0" promptText="Número" />
       <Label id="titleCadastrodeQuartos" layoutX="90.0" layoutY="19.0" text="Cadastro de Quartos">
