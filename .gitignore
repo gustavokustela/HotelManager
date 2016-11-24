@@ -2,6 +2,16 @@
 HotelManager.iml
 .idea/
 out
+HotelManager/.settings
+HotelManager/.classpath
+HotelManager/.project
+.project
+HotelManager/bin/.classpath
+HotelManager/bin/.project
+HotelManager/bin/.settings/
+HotelManager/bin/View
+HotelManager/bin/.gitignore
+hotelManager/bin
 bin
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
