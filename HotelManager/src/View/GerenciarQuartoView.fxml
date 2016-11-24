@@ -13,7 +13,7 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TableView id="infoTable" layoutX="31.0" layoutY="152.0" prefHeight="436.0" prefWidth="1039.0">
+      <TableView id="tableQuartos" fx:id="tableQuartos" layoutX="31.0" layoutY="152.0" prefHeight="436.0" prefWidth="1039.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
@@ -34,7 +34,7 @@
             <Image url="@Imagens/door.png" />
          </image>
       </ImageView>
-      <Button id="btnAtualizarDados" layoutX="877.0" layoutY="598.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
+      <Button id="btnAtualizarDados" fx:id="btnAtualizarDados" layoutX="877.0" layoutY="598.0" mnemonicParsing="false" onAction="#loadTable" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>

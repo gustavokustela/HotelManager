@@ -3,6 +3,8 @@ package Control;
 import DAO.QuartoDAO;
 import Model.QuartoModel;
 
+import java.util.List;
+
 public class QuartoController {
     QuartoDAO quartoDAO = new QuartoDAO();
     public void create(QuartoModel estada){
@@ -31,5 +33,9 @@ public class QuartoController {
         current.setAreaM2(toNew.getAreaM2());
         current.setValorDiaria(toNew.getValorDiaria());
         return current;
+    }
+
+    public List<QuartoModel> list() {
+        return quartoDAO.list();
     }
 }
