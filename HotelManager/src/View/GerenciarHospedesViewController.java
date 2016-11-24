@@ -50,7 +50,7 @@ public class GerenciarHospedesViewController implements Initializable {
         endCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, String>("endereco"));
         telCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, String>("telefone"));
         sexoCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, String>("sexo"));
-        estCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, String>("qtdEstadas"));
+        estCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, Integer>("qtdEstadas"));
         tableHospedes.setItems(data);
         tableHospedes.getColumns().addAll(nameCol, cpfCol, rgCol, nascCol, endCol, telCol, sexoCol, estCol);
     }

@@ -73,6 +73,6 @@ public class QuartoDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return new ArrayList<>();
+        return quartos;
     }
 }
