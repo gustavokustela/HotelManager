@@ -7,7 +7,7 @@ public class HospedeController {
     public void create(HospedeModel estada){
         hospedeDAO.create(estada);
     }
-    public HospedeModel read(Long id){
+    public HospedeModel read(String id){
         HospedeModel estada = hospedeDAO.read(id);
         return estada;
     }
@@ -16,7 +16,7 @@ public class HospedeController {
         current = merge(current, toNew);
         hospedeDAO.update(current);
     }
-    public void delete(Long id){
+    public void delete(String id){
         HospedeModel estada = read(id);
         hospedeDAO.delete(estada);
     }
