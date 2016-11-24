@@ -2,7 +2,7 @@ package View;
 
 public class CadastroHospedeViewController {
 	
-	//Declaração de recursos (elementos) disponíveis para a tela de Cadastro de Hospede	
+	//Declaração de recursos (elementos) disponíveis para a tela de Cadastro de Hospede
 	@FXML
 	private Pane mainCadastroDeHospedes;
 	
@@ -31,10 +31,10 @@ public class CadastroHospedeViewController {
 	private ImageView imgIconCadastroDeHospedes;
 	
 	@FXML
-	private imageView imgCancelBtn;
+	private ImageView imgCancelBtn;
 	
 	@FXML
-	private imageView imgFinalBtn;
+	private ImageView imgFinalBtn;
 	
 	@FXML
 	private TextField txtNomeHosp;
