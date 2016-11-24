@@ -6,53 +6,53 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="mainCadastroDeUsuarios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastroUsuarioViewController">
+<Pane id="mainCadastroDeUsuarios" fx:id="mainCadastroDeUsuarios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastroUsuarioViewController">
    <children>
-      <TextField id="txtBoxNomeUser" layoutX="59.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
-      <Label id="titleCadastrDeUsuarios" layoutX="43.0" layoutY="14.0" text="Cadastro de Usuários">
+      <TextField id="txtBoxNomeUser" fx:id="txtBoxNomeUser" layoutX="59.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
+      <Label id="titleCadastrDeUsuarios" fx:id="titleCadastrDeUsuarios" layoutX="43.0" layoutY="14.0" text="Cadastro de Usuários">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField id="txtBoxRgUser" layoutX="299.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="RG" />
-      <TextField id="txtBoxEndLougradouro" layoutX="59.0" layoutY="386.0" prefHeight="31.0" prefWidth="668.0" promptText="Rua, Avenida, Alamenda..." />
-      <TextField id="txtBoxCpfUser" layoutX="568.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="CPF" />
-      <Label id="lblDadosPessoais" layoutX="59.0" layoutY="95.0" text="Dados Pessoais" />
-      <Label id="lblDadosDeEndereco" layoutX="59.0" layoutY="357.0" text="Dados de Endereço" />
-      <TextField id="txtBoxDtNascUser" layoutX="59.0" layoutY="168.0" prefHeight="31.0" prefWidth="206.0" promptText="Data de Nascimento" />
-      <TextField id="txtBoxEndNumero" layoutX="737.0" layoutY="386.0" prefHeight="31.0" prefWidth="78.0" promptText="Número" />
-      <Separator layoutX="43.0" layoutY="339.0" prefHeight="21.0" prefWidth="803.0" />
-      <TextField id="txtBoxEndBaiiro" layoutX="59.0" layoutY="429.0" prefHeight="31.0" prefWidth="418.0" promptText="Bairro" />
-      <TextField id="txtBoxEndCidade" layoutX="499.0" layoutY="429.0" prefHeight="31.0" prefWidth="196.0" promptText="Cidade" />
-      <TextField id="txtBoxEndEstado" layoutX="708.0" layoutY="429.0" prefHeight="31.0" prefWidth="111.0" promptText="Estado" />
-      <TextField id="txtBoxSexoUser" layoutX="58.0" layoutY="213.0" prefHeight="31.0" prefWidth="206.0" promptText="Sexo" />
-      <TextField id="txtBoxTelefoneUser" layoutX="491.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone Principal" />
-      <Separator layoutX="33.0" layoutY="263.0" prefHeight="21.0" prefWidth="803.0" />
-      <Label id="lblDadosDeContato" layoutX="59.0" layoutY="284.0" text="Dados de Login" />
-      <TextField id="txtBoxSalarioUser" layoutX="299.0" layoutY="214.0" prefHeight="31.0" prefWidth="176.0" promptText="Salário" />
-      <CheckBox id="checkBoxIsAdminSistema" layoutX="705.0" layoutY="221.0" mnemonicParsing="false" text="Administrador" />
-      <Separator layoutX="52.0" layoutY="467.0" prefHeight="21.0" prefWidth="803.0" />
-      <ImageView id="imgCadastroUser" fitHeight="104.0" fitWidth="102.0" layoutX="708.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <TextField id="txtBoxRgUser" fx:id="txtBoxRgUser" layoutX="299.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="RG" />
+      <TextField id="txtBoxEndLougradouro" fx:id="txtBoxEndLougradouro" layoutX="59.0" layoutY="386.0" prefHeight="31.0" prefWidth="668.0" promptText="Rua, Avenida, Alamenda..." />
+      <TextField id="txtBoxCpfUser" fx:id="txtBoxCpfUser" layoutX="568.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="CPF" />
+      <Label id="lblDadosPessoais" fx:id="lblDadosPessoais" layoutX="59.0" layoutY="95.0" text="Dados Pessoais" />
+      <Label id="lblDadosDeEndereco" fx:id="lblDadosDeEndereco" layoutX="59.0" layoutY="357.0" text="Dados de Endereço" />
+      <TextField id="txtBoxDtNascUser" fx:id="txtBoxDtNascUser" layoutX="59.0" layoutY="168.0" prefHeight="31.0" prefWidth="206.0" promptText="Data de Nascimento" />
+      <TextField id="txtBoxEndNumero" fx:id="txtBoxEndNumero" layoutX="737.0" layoutY="386.0" prefHeight="31.0" prefWidth="78.0" promptText="Número" />
+      <Separator id="sepMid" fx:id="sepMid" layoutX="40.0" layoutY="339.0" prefHeight="21.0" prefWidth="803.0" />
+      <TextField id="txtBoxEndBairro" fx:id="txtBoxEndBairro" layoutX="59.0" layoutY="429.0" prefHeight="31.0" prefWidth="418.0" promptText="Bairro" />
+      <TextField id="txtBoxEndCidade" fx:id="txtBoxEndCidade" layoutX="499.0" layoutY="429.0" prefHeight="31.0" prefWidth="196.0" promptText="Cidade" />
+      <TextField id="txtBoxEndEstado" fx:id="txtBoxEndEstado" layoutX="708.0" layoutY="429.0" prefHeight="31.0" prefWidth="111.0" promptText="Estado" />
+      <TextField id="txtBoxSexoUser" fx:id="txtBoxSexoUser" layoutX="58.0" layoutY="213.0" prefHeight="31.0" prefWidth="206.0" promptText="Sexo" />
+      <TextField id="txtBoxTelefoneUser" fx:id="txtBoxTelefoneUser" layoutX="491.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone Principal" />
+      <Separator id="sepTop" fx:id="sepTop" layoutX="38.0" layoutY="263.0" prefHeight="21.0" prefWidth="803.0" />
+      <Label id="lblDadosDeLogin" fx:id="lblDadosDeLogin" layoutX="59.0" layoutY="284.0" text="Dados de Login" />
+      <TextField id="txtBoxSalarioUser" fx:id="txtBoxSalarioUser" layoutX="299.0" layoutY="214.0" prefHeight="31.0" prefWidth="176.0" promptText="Salário" />
+      <CheckBox id="checkBoxIsAdminSistema" fx:id="checkBoxIsAdminSistema" layoutX="705.0" layoutY="221.0" mnemonicParsing="false" text="Administrador" />
+      <Separator id="sepBotton" fx:id="sepBotton" layoutX="45.0" layoutY="467.0" prefHeight="21.0" prefWidth="803.0" />
+      <ImageView id="imgCadastroUser" fx:id="imgCadastroUser" fitHeight="104.0" fitWidth="102.0" layoutX="708.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/user%20(1).png" />
          </image>
       </ImageView>
-      <Button id="btnCancelCadUser" layoutX="179.0" layoutY="497.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="179.0" text="Cancelar" />
-      <ImageView fitHeight="33.0" fitWidth="44.0" layoutX="198.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+      <Button id="btnCancelCadUser" fx:id="btnCancelCadUser" layoutX="179.0" layoutY="497.0" mnemonicParsing="false" onAction="#cancelarCadastro" prefHeight="56.0" prefWidth="179.0" text="Cancelar" />
+      <ImageView id="imgCancelCadButton" fx:id="imgCancelCadButton" fitHeight="33.0" fitWidth="44.0" layoutX="198.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/cancel.png" />
          </image>
       </ImageView>
-      <Button id="btnFinalCadUser" layoutX="499.0" layoutY="497.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="179.0" text="Finalizar Cadastro">
+      <Button id="btnFinalCadUser" fx:id="btnFinalCadUser" layoutX="499.0" layoutY="497.0" mnemonicParsing="false" onAction="#finalizarCadastro" prefHeight="56.0" prefWidth="179.0" text="Finalizar Cadastro">
          <graphic>
-            <ImageView fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="imgFinalCadButton" fx:id="imgFinalCadButton" fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagens/checked.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <TextField id="txtBoxSexoUser" layoutX="57.0" layoutY="308.0" prefHeight="31.0" prefWidth="206.0" promptText="Usuario" />
-      <PasswordField layoutX="300.0" layoutY="307.0" prefHeight="31.0" prefWidth="170.0" promptText="Senha" />
+      <TextField id="txtBoxUserLogin" fx:id="txtBoxUserLogin" layoutX="57.0" layoutY="308.0" prefHeight="31.0" prefWidth="206.0" promptText="Usuario" />
+      <PasswordField id="txtBoxUserPassword" fx:id="txtBoxUserPassword" layoutX="300.0" layoutY="307.0" prefHeight="31.0" prefWidth="170.0" promptText="Senha" />
    </children>
 </Pane>

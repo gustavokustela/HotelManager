@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 
 public class CadastroQuartoViewController {
 
-	//Declara��o de recursos (elementos) dispon�veis para a tela de Cadastro de Quartos
+	//Declaracao de recursos (elementos) disponiveis para a tela de Cadastro de Quartos
 	@FXML
 	private Pane mainCadastroDeQuartos;
 	
@@ -62,7 +62,7 @@ public class CadastroQuartoViewController {
 	@FXML
 	private Button btnFinalCadQuarto;
 	
-	//Declara��o de metodos
+	//Declaracao de metodos
 	@FXML
 	public void cancelarCadastro(){
 		
