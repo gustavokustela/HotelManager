@@ -4,23 +4,20 @@ import DAO.QuartoDAO;
 import Model.QuartoModel;
 
 public class QuartoController {
+    QuartoDAO quartoDAO = new QuartoDAO();
     public void create(QuartoModel estada){
-        QuartoDAO quartoDAO = new QuartoDAO();
         quartoDAO.create(estada);
     }
     public QuartoModel read(Long id){
-        QuartoDAO quartoDAO = new QuartoDAO();
         QuartoModel estada = quartoDAO.read(id);
         return estada;
     }
     public void update(QuartoModel toNew){
-        QuartoDAO quartoDAO = new QuartoDAO();
         QuartoModel current = read(toNew.getNumero());
         current = merge(current, toNew);
         quartoDAO.update(current);
     }
     public void delete(Long id){
-        QuartoDAO quartoDAO = new QuartoDAO();
         QuartoModel estada = read(id);
         quartoDAO.delete(estada);
     }

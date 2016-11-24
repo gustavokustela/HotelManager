@@ -3,23 +3,20 @@ import DAO.FuncionarioDAO;
 import Model.FuncionarioModel;
 
 public class FuncionarioController {
+    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
     public void create(FuncionarioModel funcionario){
-        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
         funcionarioDAO.create(funcionario);
     }
     public FuncionarioModel read(Long id){
-        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
         FuncionarioModel funcionario = funcionarioDAO.read(id);
         return funcionario;
     }
     public void update(FuncionarioModel toNew){
-        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
         FuncionarioModel current = read(toNew.getCodigo());
         current = merge(current, toNew);
         funcionarioDAO.update(current);
     }
     public void delete(Long id){
-        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
         FuncionarioModel funcionario = read(id);
         funcionarioDAO.delete(funcionario);
     }
@@ -34,5 +31,9 @@ public class FuncionarioController {
         current.setTelefone(toNew.getTelefone());
         current.setSexo(toNew.getSexo());
         return current;
+    }
+
+    public boolean Auth(String user, String pwd){
+        return funcionarioDAO.Auth(user,pwd);
     }
 }

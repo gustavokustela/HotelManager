@@ -3,23 +3,20 @@ import DAO.HospedeDAO;
 import Model.HospedeModel;
 
 public class HospedeController {
+    HospedeDAO hospedeDAO = new HospedeDAO();
     public void create(HospedeModel estada){
-        HospedeDAO hospedeDAO = new HospedeDAO();
         hospedeDAO.create(estada);
     }
     public HospedeModel read(Long id){
-        HospedeDAO hospedeDAO = new HospedeDAO();
         HospedeModel estada = hospedeDAO.read(id);
         return estada;
     }
     public void update(HospedeModel toNew){
-        HospedeDAO hospedeDAO = new HospedeDAO();
         HospedeModel current = read(toNew.getCpf());
         current = merge(current, toNew);
         hospedeDAO.update(current);
     }
     public void delete(Long id){
-        HospedeDAO hospedeDAO = new HospedeDAO();
         HospedeModel estada = read(id);
         hospedeDAO.delete(estada);
     }

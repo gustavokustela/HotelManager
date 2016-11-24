@@ -1,5 +1,6 @@
 package View;
 
+import Control.FuncionarioController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -32,8 +33,13 @@ public class PrincipalViewController {
     @FXML
     public void login() throws IOException {
         if(!txtUser.getText().isEmpty() && !txtPassword.getText().isEmpty()){
-            menuBar.setDisable(false);
-            principalPane.getChildren().clear();
+            FuncionarioController funcController = new FuncionarioController();
+            if(funcController.Auth(txtUser.getText(), txtPassword.getText())){
+                menuBar.setDisable(false);
+                principalPane.getChildren().clear();
+            }else {
+                System.out.println("Erro, usuario nao cadastrado");
+            }
         }
     }
 

@@ -3,23 +3,20 @@ import DAO.EstadaDAO;
 import Model.EstadaModel;
 
 public class EstadaController {
+    EstadaDAO estadaDAO = new EstadaDAO();
     public void create(EstadaModel estada){
-        EstadaDAO estadaDAO = new EstadaDAO();
         estadaDAO.create(estada);
     }
     public EstadaModel read(Long id){
-        EstadaDAO estadaDAO = new EstadaDAO();
         EstadaModel estada = estadaDAO.read(id);
         return estada;
     }
     public void update(EstadaModel toNew){
-        EstadaDAO estadaDAO = new EstadaDAO();
         EstadaModel current = read(toNew.getCodigoIdentificacao());
         current = merge(current, toNew);
         estadaDAO.update(current);
     }
     public void delete(Long id){
-        EstadaDAO estadaDAO = new EstadaDAO();
         EstadaModel estada = read(id);
         estadaDAO.delete(estada);
     }

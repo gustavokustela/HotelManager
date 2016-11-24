@@ -3,7 +3,9 @@ package DAO;
 import Model.FuncionarioModel;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,5 +58,24 @@ public class FuncionarioDAO {
             e.printStackTrace();
         }
         return new ArrayList<>();
+    }
+    public boolean Auth(String user, String pwd){
+        boolean valid=false;
+        DatabaseConnection dbc = new DatabaseConnection();
+        try {
+            Connection conn = dbc.openConnection();
+            Statement stmt = conn.createStatement();
+            String sql = "select * from funcionario where user like '"+user+"' and password like '"+pwd+"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            if(rs.next()){
+                String codigoFunc = rs.getString("codigoFunc");
+                valid = true;
+            }
+            rs.close();
+            dbc.closeConnection(conn);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return valid;
     }
 }
