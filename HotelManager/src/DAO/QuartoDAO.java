@@ -55,11 +55,17 @@ public class QuartoDAO {
         try {
             Connection conn = dbc.openConnection();
             Statement stmt = conn.createStatement();
-            String sql = "select * from hospede h, pessoa p where h.codigoHospede=p.codigo and p.isActive=true";
+            String sql = "select * from quarto where isActive=true";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
                 QuartoModel quarto = new QuartoModel();
                 quarto.setNumero(rs.getLong("numero"));
+                quarto.setAndar(rs.getInt("andar"));
+                quarto.setSuiteEspecial(rs.getBoolean("isSuiteEspecial"));
+                quarto.setQtdCamasSolteiro(rs.getInt("qtdeCamasSolteiro"));
+                quarto.setQtdCamasCasal(rs.getInt("qtdeCamasCasal"));
+                quarto.setAreaM2(rs.getFloat("areaM2"));
+                quarto.setValorDiaria(rs.getFloat("valorDiaria"));
                 quartos.add(quarto);
             }
             rs.close();

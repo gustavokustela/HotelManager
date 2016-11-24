@@ -6,7 +6,7 @@ public class QuartoModel {
     private boolean isSuiteEspecial;
     private int qtdCamasSolteiro;
     private int qtdCamasCasal;
-    private long areaM2;
+    private float areaM2;
     private double valorDiaria;
 
     //Getters and setters
@@ -50,11 +50,11 @@ public class QuartoModel {
         this.qtdCamasCasal = qtdCamasCasal;
     }
 
-    public long getAreaM2() {
+    public float getAreaM2() {
         return areaM2;
     }
 
-    public void setAreaM2(long areaM2) {
+    public void setAreaM2(float areaM2) {
         this.areaM2 = areaM2;
     }
 
