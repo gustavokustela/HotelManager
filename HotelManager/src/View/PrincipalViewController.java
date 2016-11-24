@@ -38,8 +38,18 @@ public class PrincipalViewController {
                 menuBar.setDisable(false);
                 principalPane.getChildren().clear();
             }else {
-                System.out.println("Erro, usuario nao cadastrado");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Atencao");
+                alert.setHeaderText(null);
+                alert.setContentText("Usuario nao esta cadastrado");
+                alert.showAndWait();
             }
+        }else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Atencao");
+            alert.setHeaderText(null);
+            alert.setContentText("Digite todos os campos");
+            alert.showAndWait();
         }
     }
 
