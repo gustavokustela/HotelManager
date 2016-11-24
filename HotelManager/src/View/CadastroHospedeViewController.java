@@ -1,8 +1,13 @@
 package View;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+
 public class CadastroHospedeViewController {
 	
-	//Declaração de recursos (elementos) disponíveis para a tela de Cadastro de Hospede	
+	//Declaraï¿½ï¿½o de recursos (elementos) disponï¿½veis para a tela de Cadastro de Hospede	
 	@FXML
 	private Pane mainCadastroDeHospedes;
 	
@@ -31,10 +36,10 @@ public class CadastroHospedeViewController {
 	private ImageView imgIconCadastroDeHospedes;
 	
 	@FXML
-	private imageView imgCancelBtn;
-	
+	private ImageView imgCancelBtn;
+
 	@FXML
-	private imageView imgFinalBtn;
+	private ImageView imgFinalBtn;
 	
 	@FXML
 	private TextField txtNomeHosp;
@@ -64,9 +69,6 @@ public class CadastroHospedeViewController {
 	private TextField txtEndNrHosp;
 	
 	@FXML
-	private TextField txtEndBairroHosp;
-	
-	@FXML
 	private TextField txtEndCidadeHosp;
 	
 	@FXML
@@ -85,7 +87,7 @@ public class CadastroHospedeViewController {
 	private Button btnFinalCadHosp;
 	
 	
-	//Declaração de metodos
+	//Declaraï¿½ï¿½o de metodos
 	@FXML
 	public void cancelarCadastro(){
 		

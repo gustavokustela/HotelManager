@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.*?>
@@ -9,7 +10,7 @@
 
 <Pane id="MainPrincipalView" fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.PrincipalViewController">
    <children>
-      <MenuBar id="mainMenuBar" fx:id="menuBar" prefHeight="32.0" prefWidth="1215.0">
+      <MenuBar id="mainMenuBar" fx:id="menuBar" disable="true" prefHeight="32.0" prefWidth="1215.0">
          <menus>
             <Menu id="menuHospedes" fx:id="menuHospedes" mnemonicParsing="false" text="Hospedes">
                <items>
@@ -41,6 +42,36 @@
           <Menu id="sair" fx:id="optSair" mnemonicParsing="false" text="Sair" />
         </menus>
       </MenuBar>
-      <StackPane fx:id="principalPane" layoutY="35.0" prefHeight="685.0" prefWidth="1280.0" />
+      <StackPane fx:id="principalPane" layoutY="35.0" prefHeight="685.0" prefWidth="1280.0">
+         <children>
+            <Pane id="mainLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="400.0">
+               <children>
+                  <TextField id="txtUserName" layoutX="96.0" layoutY="187.0" prefHeight="31.0" prefWidth="245.0" promptText="Usuario" />
+                  <PasswordField id="txtPassword" layoutX="96.0" layoutY="239.0" prefHeight="31.0" prefWidth="245.0" promptText="Senha" />
+                  <Label id="titleLoginView" layoutX="65.0" layoutY="117.0" text="Hotel Manager">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <ImageView id="imgLogin" fitHeight="103.0" fitWidth="114.0" layoutX="152.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagens/hotel.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="imgUser" fitHeight="31.0" fitWidth="34.0" layoutX="59.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagens/userLog.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="imgPassword" fitHeight="31.0" fitWidth="34.0" layoutX="59.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagens/lockLog.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="btnLogin" layoutX="133.0" layoutY="286.0" mnemonicParsing="false" onAction="#login" prefHeight="48.0" prefWidth="142.0" text="Login" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
    </children>
 </Pane>

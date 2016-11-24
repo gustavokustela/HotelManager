@@ -3,6 +3,7 @@ package View;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.MenuBar;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
@@ -16,11 +17,11 @@ public class PrincipalViewController {
     @FXML
     private StackPane principalPane;
 
-    public void loadLogin() throws IOException {
-        principalPane.getChildren().clear();
-        Node no = FXMLLoader.load(getClass().getResource("/View/LoginView.fxml"));
-        principalPane.getChildren().add(no);
-        loadLogin();
+    @FXML
+    private MenuBar menuBar;
+
+    public void login() throws IOException {
+        menuBar.setDisable(false);
     }
 
     @FXML
