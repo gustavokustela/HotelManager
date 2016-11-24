@@ -13,16 +13,25 @@ public class HospedeDAO {
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
-            String sql = "insert into hospede " +
-                    "(id, nome, idade, sexo, status) " +
-                    "values (?,?,?,?,?);";
-            /*PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setString(1, null);
-            stmt.setString(2, h.getNome());
-            stmt.setString(3, Integer.toString(h.getIdade()));
-            stmt.setString(4, h.getSexo());
-            stmt.setString(5, h.getStatus());
-            boolean res = stmt.execute();*/
+            String sql = "insert into pessoa(nome,cpf,rg,dataNasc,endereco,telefone,sexo,isActive) " +
+                    "VALUES(?,?,?,?,?,?,?,true);";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, hospede.getNome());
+            stmt.setString(2, hospede.getCpf());
+            stmt.setString(3, hospede.getRG());
+            stmt.setString(4, hospede.getDataNasc());
+            stmt.setString(5, hospede.getEndereco());
+            stmt.setString(6, hospede.getTelefone());
+            stmt.setString(7, hospede.getSexo());
+            boolean res = stmt.execute();
+
+            sql = "insert into hospede(codigoHospede,email,isEstrangeiro) " +
+                    "VALUES(?,?,?);";
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, hospede.getNome());
+            stmt.setString(2, hospede.getCpf());
+            stmt.setString(3, hospede.getRG());
+
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
