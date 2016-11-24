@@ -2,6 +2,8 @@ package Control;
 import DAO.FuncionarioDAO;
 import Model.FuncionarioModel;
 
+import java.util.List;
+
 public class FuncionarioController {
     FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
     public void create(FuncionarioModel funcionario){
@@ -35,5 +37,9 @@ public class FuncionarioController {
 
     public boolean Auth(String user, String pwd){
         return funcionarioDAO.Auth(user,pwd);
+    }
+
+    public List<FuncionarioModel> list() {
+        return funcionarioDAO.list();
     }
 }

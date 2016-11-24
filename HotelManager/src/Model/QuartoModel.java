@@ -1,28 +1,28 @@
 package Model;
 
 public class QuartoModel {
-    private long numero;
-    private long andar;
+    private int numero;
+    private int andar;
     private boolean isSuiteEspecial;
     private int qtdCamasSolteiro;
     private int qtdCamasCasal;
     private float areaM2;
-    private double valorDiaria;
+    private float valorDiaria;
 
     //Getters and setters
-    public long getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(long numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    public long getAndar() {
+    public int getAndar() {
         return andar;
     }
 
-    public void setAndar(long andar) {
+    public void setAndar(int andar) {
         this.andar = andar;
     }
 
@@ -58,11 +58,11 @@ public class QuartoModel {
         this.areaM2 = areaM2;
     }
 
-    public double getValorDiaria() {
+    public float getValorDiaria() {
         return valorDiaria;
     }
 
-    public void setValorDiaria(double valorDiaria) {
+    public void setValorDiaria(float valorDiaria) {
         this.valorDiaria = valorDiaria;
     }
 }

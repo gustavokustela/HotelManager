@@ -21,7 +21,7 @@ public class QuartoDAO {
             e.printStackTrace();
         }
     }
-    public QuartoModel read(Long id){
+    public QuartoModel read(int id){
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
@@ -59,7 +59,7 @@ public class QuartoDAO {
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
                 QuartoModel quarto = new QuartoModel();
-                quarto.setNumero(rs.getLong("numero"));
+                quarto.setNumero(rs.getInt("numero"));
                 quarto.setAndar(rs.getInt("andar"));
                 quarto.setSuiteEspecial(rs.getBoolean("isSuiteEspecial"));
                 quarto.setQtdCamasSolteiro(rs.getInt("qtdeCamasSolteiro"));

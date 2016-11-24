@@ -50,14 +50,32 @@ public class FuncionarioDAO {
     }
     //lista todos com flag active true
     public List<FuncionarioModel> list(){
+        List<FuncionarioModel> funcionarios = new ArrayList<>();
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
+            Statement stmt = conn.createStatement();
+            String sql = "select * from funcionario f, pessoa p where f.codigoFunc=p.codigo and p.isActive=true";
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                FuncionarioModel funcionario = new FuncionarioModel();
+                funcionario.setNome(rs.getString("nome"));
+                funcionario.setCpf(rs.getString("cpf"));
+                funcionario.setRG(rs.getString("rg"));
+                funcionario.setDataNasc(rs.getString("dataNasc"));
+                funcionario.setEndereco(rs.getString("endereco"));
+                funcionario.setTelefone(rs.getString("telefone"));
+                funcionario.setSexo(rs.getString("sexo"));
+                funcionario.setSalario(rs.getFloat("salario"));
+                funcionario.setAdmin(rs.getBoolean("isAdmin"));
+                funcionarios.add(funcionario);
+            }
+            rs.close();
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return new ArrayList<>();
+        return funcionarios;
     }
     public boolean Auth(String user, String pwd){
         boolean valid=false;

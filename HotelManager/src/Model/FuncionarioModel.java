@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class FuncionarioModel extends PessoaModel{
     private long codigo;
-    private long salario;
+    private float salario;
     private boolean isAdmin;
 
     private Scanner reader = new Scanner(System.in);
@@ -22,11 +22,11 @@ public class FuncionarioModel extends PessoaModel{
         this.codigo = codigo;
     }
 
-    public long getSalario() {
+    public float getSalario() {
         return salario;
     }
 
-    public void setSalario(long salario) {
+    public void setSalario(float salario) {
         this.salario = salario;
     }
 
@@ -119,7 +119,7 @@ public class FuncionarioModel extends PessoaModel{
         quarto.setSuiteEspecial(reader.nextBoolean());
 
         System.out.print("Valor da diaria do quarto: ");
-        quarto.setValorDiaria(reader.nextDouble());
+        quarto.setValorDiaria(reader.nextFloat());
 
         System.out.print("Area do quarto (m2): ");
         quarto.setAreaM2(reader.nextLong());

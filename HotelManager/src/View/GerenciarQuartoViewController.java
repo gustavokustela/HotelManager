@@ -38,13 +38,10 @@ public class GerenciarQuartoViewController implements Initializable{
 
     @FXML
     private void loadTable() {
-        System.out.println(data.get(0).isSuiteEspecial());
-        System.out.println(data.get(0).getQtdCamasSolteiro());
-        System.out.println(data.get(0).getQtdCamasCasal());
         tableQuartos.getColumns().clear();
         diariaCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Float>("valorDiaria"));
-        numCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Long>("numero"));
-        andarCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Long>("andar"));
+        numCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("numero"));
+        andarCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("andar"));
         suiteCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Boolean>("isSuiteEspecial"));
         soltCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("qtdeCamasSolteiro"));
         casalCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("qtdeCamasCasal"));

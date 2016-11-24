@@ -10,7 +10,7 @@ public class QuartoController {
     public void create(QuartoModel estada){
         quartoDAO.create(estada);
     }
-    public QuartoModel read(Long id){
+    public QuartoModel read(int id){
         QuartoModel estada = quartoDAO.read(id);
         return estada;
     }
@@ -19,7 +19,7 @@ public class QuartoController {
         current = merge(current, toNew);
         quartoDAO.update(current);
     }
-    public void delete(Long id){
+    public void delete(int id){
         QuartoModel estada = read(id);
         quartoDAO.delete(estada);
     }
