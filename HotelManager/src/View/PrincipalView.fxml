@@ -7,34 +7,32 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="MainPrincipalView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PrincipalViewController">
+<Pane id="MainPrincipalView" fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.PrincipalViewController">
    <children>
       <MenuBar id="mainMenuBar" fx:id="menuBar" prefHeight="32.0" prefWidth="1215.0">
          <menus>
             <Menu id="menuHospedes" fx:id="menuHospedes" mnemonicParsing="false" text="Hospedes">
                <items>
-                  <MenuItem id="HospCadastrar" fx:id="hospCadastrar" mnemonicParsing="false" text="Cadastrar" />
-                  <MenuItem id="hospGerenciar" fx:id="hospGerenciar" mnemonicParsing="false" text="Gerenciar" />
+                  <MenuItem id="HospCadastrar" fx:id="hospCad" mnemonicParsing="false" onAction="#loadCadHospede" text="Cadastrar" />
+                  <MenuItem id="hospGerenciar" fx:id="hospGerenciar" mnemonicParsing="false" onAction="#loadGerenHospede" text="Gerenciar" />
                </items>
             </Menu>
             <Menu id="menuQuartos" fx:id="menuQuartos" mnemonicParsing="false" text="Quartos">
               <items>
-                <MenuItem id="quartoCadastrar" fx:id="quartoCadastrar" mnemonicParsing="false" text="Cadastrar" />
-                  <MenuItem id="quartoGerenciar" fx:id="quartoGerenciar" mnemonicParsing="false" text="Gerenciar" />
+                <MenuItem id="quartoCadastrar" fx:id="quartoCadastrar" mnemonicParsing="false" onAction="#loadCadQuarto" text="Cadastrar" />
+                  <MenuItem id="quartoGerenciar" fx:id="quartoGerenciar" mnemonicParsing="false" onAction="#loadGerenQuarto" text="Gerenciar" />
               </items>
             </Menu>
             <Menu id="menuUsuarios" fx:id="menuUser" mnemonicParsing="false" text="Usuarios">
               <items>
-                <MenuItem id="usuarioCadastrar" fx:id="userCadastrar" mnemonicParsing="false" text="Cadastrar" />
-                  <MenuItem id="usuarioGerenciar" fx:id="userGerenciar" mnemonicParsing="false" text="Gerenciar" />
+                <MenuItem id="usuarioCadastrar" fx:id="userCadastrar" mnemonicParsing="false" onAction="#loadCadUsuario" text="Cadastrar" />
+                  <MenuItem id="usuarioGerenciar" fx:id="userGerenciar" mnemonicParsing="false" onAction="#loadGerenUsuario" text="Gerenciar" />
               </items>
             </Menu>
             <Menu id="menuRelatorios" fx:id="menuRelatorio" mnemonicParsing="false" text="Relatorio">
-              <items>
-                <MenuItem id="relatorioEstadas" fx:id="relatorioEstadas" mnemonicParsing="false" text="Estadas" />
-                  <MenuItem id="relatorioDespesas" fx:id="relatorioDespesas" mnemonicParsing="false" text="Despesas" />
-                  <MenuItem id="relatorioQuartos" fx:id="relatorioQuartos" mnemonicParsing="false" text="Quartos" />
-              </items>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadRelatorio" text="Relatorios disponiveis" />
+               </items>
             </Menu>
          </menus>
       </MenuBar>
@@ -43,10 +41,6 @@
           <Menu id="sair" fx:id="optSair" mnemonicParsing="false" text="Sair" />
         </menus>
       </MenuBar>
-      <ImageView id="imgFundoPrinciapl" fitHeight="690.0" fitWidth="1280.0" layoutY="32.0" pickOnBounds="true">
-         <image>
-            <Image url="@Imagens/HotelBellSystem.png" />
-         </image>
-      </ImageView>
+      <StackPane fx:id="principalPane" layoutY="35.0" prefHeight="685.0" prefWidth="1280.0" />
    </children>
 </Pane>
