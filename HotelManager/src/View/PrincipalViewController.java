@@ -37,6 +37,8 @@ public class PrincipalViewController {
             if(funcController.Auth(txtUser.getText(), txtPassword.getText())){
                 menuBar.setDisable(false);
                 principalPane.getChildren().clear();
+                Node no = FXMLLoader.load(getClass().getResource("/View/welcome.fxml"));
+                principalPane.getChildren().add(no);
             }else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Atencao");

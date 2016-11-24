@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="MainRelatorio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RelatorioViewController">
+   <children>
+      <Label id="titleCadastroRelatorio" layoutX="109.0" layoutY="42.0" text="Bem-vindo">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
