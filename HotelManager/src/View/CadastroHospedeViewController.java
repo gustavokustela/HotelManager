@@ -6,8 +6,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class CadastroHospedeViewController {
-	
+
 	//Declara��o de recursos (elementos) dispon�veis para a tela de Cadastro de Hospede	
+
 	@FXML
 	private Pane mainCadastroDeHospedes;
 	
