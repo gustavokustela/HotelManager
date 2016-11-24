@@ -22,6 +22,7 @@ public class PrincipalViewController {
 
     public void login() throws IOException {
         menuBar.setDisable(false);
+        principalPane.getChildren().clear();
     }
 
     @FXML

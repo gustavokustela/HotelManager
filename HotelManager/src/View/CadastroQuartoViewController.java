@@ -1,8 +1,13 @@
 package View;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+
 public class CadastroQuartoViewController {
 
-	//Declaração de recursos (elementos) disponíveis para a tela de Cadastro de Quartos
+	//Declaraï¿½ï¿½o de recursos (elementos) disponï¿½veis para a tela de Cadastro de Quartos
 	@FXML
 	private Pane mainCadastroDeQuartos;
 	
@@ -17,9 +22,6 @@ public class CadastroQuartoViewController {
 	
 	@FXML
 	private Label lblCamaCasal;
-	
-	FXML
-	private Separator sepBotton;
 	
 	@FXML
 	private ImageView imgIconCadastroQuartos;
@@ -60,7 +62,7 @@ public class CadastroQuartoViewController {
 	@FXML
 	private Button btnFinalCadQuarto;
 	
-	//Declaração de metodos
+	//Declaraï¿½ï¿½o de metodos
 	@FXML
 	public void cancelarCadastro(){
 		
