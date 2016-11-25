@@ -6,12 +6,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane id="MainRelatorio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RelatorioViewController">
+<Pane id="mainBemVindo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RelatorioViewController">
    <children>
-      <Label id="titleCadastroRelatorio" layoutX="109.0" layoutY="42.0" text="Bem-vindo">
+      <Label id="titleBemVindo" layoutX="95.0" layoutY="7.0" text="Bem-vindo">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
+      <ImageView id="imgBemVindo" fitHeight="79.0" fitWidth="89.0" layoutX="157.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/hotel.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
