@@ -54,6 +54,12 @@ public class PrincipalViewController {
             alert.showAndWait();
         }
     }
+    @FXML
+    public void loadGerenEstadas() throws IOException {
+        principalPane.getChildren().clear();
+        Node no = FXMLLoader.load(getClass().getResource("/View/GerenciarEstadasView.fxml"));
+        principalPane.getChildren().add(no);
+    }
 
     @FXML
     public void loadCadHospede() throws IOException {

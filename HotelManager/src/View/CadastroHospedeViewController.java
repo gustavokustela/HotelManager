@@ -2,14 +2,21 @@ package View;
 
 import Model.HospedeModel;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import Control.HospedeController;
+import javafx.scene.layout.StackPane;
+
+import java.io.IOException;
 
 public class CadastroHospedeViewController {
     HospedeController hospedeController = new HospedeController();
 	//Declaracao de recursos (elementos) disponiveis para a tela de Cadastro de Hospede
+
 	@FXML
 	private Pane mainCadastroDeHospedes;
 	
@@ -92,11 +99,11 @@ public class CadastroHospedeViewController {
 	//declaracao de metodos
 	@FXML
 	public void cancelarCadastro(){
-		
+		mainCadastroDeHospedes.getChildren().clear();
 	}
 	
 	@FXML
-	public void finalizarCadastro(){
+	public void finalizarCadastro() throws IOException {
 		if(!txtNomeHosp.getText().isEmpty() && !txtDtNascHosp.getText().isEmpty() &&
 				!txtRgHosp.getText().isEmpty() && !txtCpfHosp.getText().isEmpty() &&
 				!txtSexoHosp.getText().isEmpty() && !txtTelHosp.getText().isEmpty() &&
@@ -115,7 +122,12 @@ public class CadastroHospedeViewController {
             hospede.setEndereco(txtEndLogradouroHosp.getText() + ", " +
             txtEndNrHosp.getText() + ", " + txtEndBairroHosp.getText() + ", " +
             txtEndCidadeHosp.getText() + ", " + txtEndEstadoHosp.getText());
+			if(checkBoxIsEstrangeiroHosp.isSelected())
+				hospede.setEstrangeiro(1);
+			else
+				hospede.setEstrangeiro(0);
             hospedeController.create(hospede);
+			mainCadastroDeHospedes.getChildren().clear();
 		}else{
 			Alert alert = new Alert(Alert.AlertType.INFORMATION);
 			alert.setTitle("Atenção");

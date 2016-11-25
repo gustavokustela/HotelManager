@@ -8,7 +8,7 @@
 
 <Pane id="mainCadastroDeQuartos" fx:id="mainCadastroDeQuartos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastroQuartoViewController">
    <children>
-      <TextField id="txtBoxNumero" fx:id="txtBoxNumero" layoutX="84.0" layoutY="138.0" prefHeight="31.0" prefWidth="117.0" promptText="NÃºmero" />
+      <TextField id="txtBoxNumero" fx:id="txtBoxNumero" layoutX="84.0" layoutY="138.0" prefHeight="31.0" prefWidth="117.0" promptText="Numero" />
       <Label id="titleCadastrodeQuartos" fx:id="titleCadastrodeQuartos" layoutX="90.0" layoutY="19.0" text="Cadastro de Quartos">
          <font>
             <Font size="42.0" />
@@ -18,9 +18,9 @@
       <TextField id="txtBoxqtdCasal" fx:id="txtBoxQtdCasal" layoutX="224.0" layoutY="210.0" prefHeight="31.0" prefWidth="114.0" promptText="Quantidade" />
       <Label id="lblDadosQuarto" fx:id="lblDadosQuarto" layoutX="84.0" layoutY="111.0" text="Dados do Quarto" />
       <TextField id="txtBoxAndar" fx:id="txtBoxAndar" layoutX="222.0" layoutY="138.0" prefHeight="31.0" prefWidth="117.0" promptText="Andar" />
-      <TextField id="txtBoxArea" fx:id="txtBoxArea" layoutX="373.0" layoutY="210.0" prefHeight="31.0" prefWidth="117.0" promptText="Ã�rea (mÂ²)" />
-      <TextField id="txtBoxDiaria" fx:id="txtBoxDiaria" layoutX="373.0" layoutY="138.0" prefHeight="31.0" prefWidth="117.0" promptText="Valor da DiÃ¡ria" />
-      <CheckBox id="checkBoxSuiteEspecial" fx:id="checkBoxSuiteEspecial" layoutX="90.0" layoutY="268.0" mnemonicParsing="false" text="SuÃ­te Especial" />
+      <TextField id="txtBoxArea" fx:id="txtBoxArea" layoutX="373.0" layoutY="210.0" prefHeight="31.0" prefWidth="117.0" promptText="Area M2" />
+      <TextField id="txtBoxDiaria" fx:id="txtBoxDiaria" layoutX="373.0" layoutY="138.0" prefHeight="31.0" prefWidth="117.0" promptText="Valor da Diaria" />
+      <CheckBox id="checkBoxSuiteEspecial" fx:id="checkBoxSuiteEspecial" layoutX="90.0" layoutY="268.0" mnemonicParsing="false" text="Suite especial" />
       <Button id="btnCancelCadQuarto" fx:id="btnCancelCadQuarto" layoutX="56.0" layoutY="327.0" mnemonicParsing="false" onAction="#cancelarCadastro" prefHeight="56.0" prefWidth="144.0" text="Cancelar">
          <graphic>
             <ImageView id="imgCancelBtn" fx:id="imgCancelBtn" fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">

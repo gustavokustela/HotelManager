@@ -1,12 +1,14 @@
 package View;
 
+import Model.FuncionarioModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import Control.FuncionarioController;
 
 public class CadastroUsuarioViewController {
-	
+	FuncionarioController funcionarioController = new FuncionarioController();
 	//Declaracao de recursos (elementos) disponiveis para Tela de Cadastro de Usuarios
 	@FXML
 	private Pane mainCadastroDeUsuarios;
@@ -94,10 +96,37 @@ public class CadastroUsuarioViewController {
 	
 	//Declaracao de metodos
 	public void cancelarCadastro(){
-		
+		mainCadastroDeUsuarios.getChildren().clear();
 	}
 	
 	public void finalizarCadastro(){
-		
+		if(!txtBoxNomeUser.getText().isEmpty() && !txtBoxDtNascUser.getText().isEmpty() &&
+				!txtBoxRgUser.getText().isEmpty() && !txtBoxCpfUser.getText().isEmpty() &&
+				!txtBoxSexoUser.getText().isEmpty() && !txtBoxSalarioUser.getText().isEmpty() &&
+				!txtBoxTelefoneUser.getText().isEmpty() && !txtBoxUserLogin.getText().isEmpty() &&
+				!txtBoxUserPassword.getText().isEmpty() && !txtBoxEndLougradouro.getText().isEmpty() &&
+				!txtBoxEndNumero.getText().isEmpty() && !txtBoxEndBairro.getText().isEmpty() &&
+				!txtBoxEndCidade.getText().isEmpty() && !txtBoxEndEstado.getText().isEmpty())
+		{
+			FuncionarioModel funcionario = new FuncionarioModel();
+			funcionario.setNome(txtBoxNomeUser.getText());
+			funcionario.setDataNasc(txtBoxDtNascUser.getText());
+			funcionario.setRG(txtBoxRgUser.getText());
+			funcionario.setCpf(txtBoxCpfUser.getText());
+			funcionario.setSexo(txtBoxSexoUser.getText());
+			funcionario.setTelefone(txtBoxTelefoneUser.getText());
+			funcionario.setEndereco(txtBoxUserLogin.getText() + ", " +
+					txtBoxEndNumero.getText() + ", " + txtBoxEndBairro.getText() + ", " +
+					txtBoxEndCidade.getText() + ", " + txtBoxEndEstado.getText());
+			funcionario.setSalario(Float.parseFloat(txtBoxSalarioUser.getText()));
+			funcionario.setUser(txtBoxUserLogin.getText());
+			funcionario.setPassword(txtBoxUserPassword.getText());
+			if(checkBoxIsAdminSistema.isSelected())
+				funcionario.setAdmin(1);
+			else
+				funcionario.setAdmin(0);
+			funcionarioController.create(funcionario);
+			mainCadastroDeUsuarios.getChildren().clear();
+		}
 	}
 }

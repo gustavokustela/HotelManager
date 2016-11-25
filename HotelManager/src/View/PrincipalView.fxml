@@ -12,6 +12,11 @@
    <children>
       <MenuBar id="mainMenuBar" fx:id="menuBar" prefHeight="32.0" prefWidth="1215.0">
          <menus>
+            <Menu mnemonicParsing="false" text="Estadas">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#loadGerenEstadas" text="Gerenciar" />
+              </items>
+            </Menu>
             <Menu id="menuHospedes" fx:id="menuHospedes" mnemonicParsing="false" text="Hospedes">
                <items>
                   <MenuItem id="HospCadastrar" fx:id="hospCad" mnemonicParsing="false" onAction="#loadCadHospede" text="Cadastrar" />

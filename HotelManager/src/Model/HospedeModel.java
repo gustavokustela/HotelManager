@@ -1,16 +1,16 @@
 package Model;
 
 public class HospedeModel extends PessoaModel{
-    private boolean isEstrangeiro;
+    private int isEstrangeiro;
     private int qtdEstadas;
     private String email;
 
     //Getters and setters
-    public boolean isEstrangeiro() {
+    public int isEstrangeiro() {
         return isEstrangeiro;
     }
 
-    public void setEstrangeiro(boolean estrangeiro) {
+    public void setEstrangeiro(int estrangeiro) {
         isEstrangeiro = estrangeiro;
     }
 

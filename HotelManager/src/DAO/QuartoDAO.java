@@ -3,10 +3,7 @@ package DAO;
 import Model.FuncionarioModel;
 import Model.QuartoModel;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +13,19 @@ public class QuartoDAO {
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
+            String sql = "insert into quarto(numero,andar,isSuiteEspecial,qtdeCamasSolteiro,qtdeCamasCasal,areaM2,valorDiaria,isActive) " +
+                    "VALUES(?,?,?,?,?,?,?,true);";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, String.valueOf(quarto.getNumero()));
+            stmt.setString(2, String.valueOf(quarto.getAndar()));
+            stmt.setString(3, String.valueOf(quarto.isSuiteEspecial()));
+            stmt.setString(4, String.valueOf(quarto.getQtdCamasSolteiro()));
+            stmt.setString(5, String.valueOf(quarto.getQtdCamasCasal()));
+            stmt.setString(6, String.valueOf(quarto.getAreaM2()));
+            stmt.setString(7, String.valueOf(quarto.getValorDiaria()));
+            stmt.execute();
+            stmt.close();
+
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -61,7 +71,7 @@ public class QuartoDAO {
                 QuartoModel quarto = new QuartoModel();
                 quarto.setNumero(rs.getInt("numero"));
                 quarto.setAndar(rs.getInt("andar"));
-                quarto.setSuiteEspecial(rs.getBoolean("isSuiteEspecial"));
+                quarto.setSuiteEspecial(rs.getInt("isSuiteEspecial"));
                 quarto.setQtdCamasSolteiro(rs.getInt("qtdeCamasSolteiro"));
                 quarto.setQtdCamasCasal(rs.getInt("qtdeCamasCasal"));
                 quarto.setAreaM2(rs.getFloat("areaM2"));

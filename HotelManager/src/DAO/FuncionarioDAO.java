@@ -2,10 +2,7 @@ package DAO;
 
 import Model.FuncionarioModel;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +12,29 @@ public class FuncionarioDAO {
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
+            String sql = "insert into pessoa(nome,cpf,rg,dataNasc,endereco,telefone,sexo,isActive) " +
+                    "VALUES(?,?,?,?,?,?,?,true);";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, funcionario.getNome());
+            stmt.setString(2, funcionario.getCpf());
+            stmt.setString(3, funcionario.getRG());
+            stmt.setString(4, funcionario.getDataNasc());
+            stmt.setString(5, funcionario.getEndereco());
+            stmt.setString(6, funcionario.getTelefone());
+            stmt.setString(7, funcionario.getSexo());
+            stmt.execute();
+
+            sql = "insert into funcionario(codigoFunc,salario,isAdmin,user,password) " +
+                    "VALUES((select codigo from pessoa where cpf like '"+funcionario.getCpf()+"')," +
+                    "?,?,?,?);";
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, String.valueOf(funcionario.getSalario()));
+            stmt.setString(2, String.valueOf(funcionario.isAdmin()));
+            stmt.setString(3, funcionario.getUser());
+            stmt.setString(4, funcionario.getPassword());
+            stmt.execute();
+
+            stmt.close();
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -67,7 +87,7 @@ public class FuncionarioDAO {
                 funcionario.setTelefone(rs.getString("telefone"));
                 funcionario.setSexo(rs.getString("sexo"));
                 funcionario.setSalario(rs.getFloat("salario"));
-                funcionario.setAdmin(rs.getBoolean("isAdmin"));
+                funcionario.setAdmin(rs.getInt("isAdmin"));
                 funcionarios.add(funcionario);
             }
             rs.close();

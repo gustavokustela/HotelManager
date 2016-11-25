@@ -1,19 +1,15 @@
 package Model;
 
-import java.util.Date;
-
 public class EstadaModel {
     private long codigoIdentificacao;
-    private HospedeModel hospede;
-    private QuartoModel quarto;
-    private Date dataCheckIn;
-    private Date dataCheckOut;
-    private boolean isReserva;
+    private int hospede;
+    private int quarto;
+    private String dataCheckIn;
+    private String dataCheckOut;
+    private int isReserva;
 
     //Constructor
-    public EstadaModel(){
-        dataCheckIn = new Date();
-    }
+    public EstadaModel(){}
 
     //Getters and setters
     public long getCodigoIdentificacao() {
@@ -24,47 +20,47 @@ public class EstadaModel {
         this.codigoIdentificacao = codigoIdentificacao;
     }
 
-    public HospedeModel getHospede() {
+    public int getHospede() {
         return hospede;
     }
 
-    public void setHospede(HospedeModel hospede) {
+    public void setHospede(int hospede) {
         this.hospede = hospede;
     }
 
-    public QuartoModel getQuarto() {
+    public int getQuarto() {
         return quarto;
     }
 
-    public void setQuarto(QuartoModel quarto) {
+    public void setQuarto(int quarto) {
         this.quarto = quarto;
     }
 
-    public Date getDataCheckIn() {
+    public String getDataCheckIn() {
         return dataCheckIn;
     }
 
-    public void setDataCheckIn(Date dataCheckIn) {
+    public void setDataCheckIn(String dataCheckIn) {
         this.dataCheckIn = dataCheckIn;
     }
 
-    public Date getDataCheckOut() {
+    public String getDataCheckOut() {
         return dataCheckOut;
     }
 
-    public void setDataCheckOut(Date dataCheckOut) {
+    public void setDataCheckOut(String dataCheckOut) {
         this.dataCheckOut = dataCheckOut;
     }
 
-    public boolean isReserva() {
+    public int isReserva() {
         return isReserva;
     }
 
-    public void setReserva(boolean reserva) {
+    public void setReserva(int reserva) {
         isReserva = reserva;
     }
 
-    public double calcularDespesa(){
+    /*public double calcularDespesa(){
         if(dataCheckOut!=null){
             double despesa = quarto.getValorDiaria();
             if(dataCheckOut.getDay()-dataCheckIn.getDay()>1){
@@ -74,5 +70,5 @@ public class EstadaModel {
         } else{
             return 0;
         }
-    }
+    }*/
 }

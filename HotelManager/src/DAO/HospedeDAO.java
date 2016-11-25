@@ -23,15 +23,16 @@ public class HospedeDAO {
             stmt.setString(5, hospede.getEndereco());
             stmt.setString(6, hospede.getTelefone());
             stmt.setString(7, hospede.getSexo());
-            boolean res = stmt.execute();
+            stmt.execute();
 
             sql = "insert into hospede(codigoHospede,email,isEstrangeiro) " +
-                    "VALUES(?,?,?);";
+                    "VALUES((select codigo from pessoa where cpf like '"+hospede.getCpf()+"'),?,?);";
             stmt = conn.prepareStatement(sql);
-            stmt.setString(1, hospede.getNome());
-            stmt.setString(2, hospede.getCpf());
-            stmt.setString(3, hospede.getRG());
+            stmt.setString(1, hospede.getEmail());
+            stmt.setString(2, String.valueOf(hospede.isEstrangeiro()));
+            stmt.execute();
 
+            stmt.close();
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -83,7 +84,7 @@ public class HospedeDAO {
                 hospede.setEndereco(rs.getString("endereco"));
                 hospede.setTelefone(rs.getString("telefone"));
                 hospede.setSexo(rs.getString("sexo"));
-                hospede.setEstrangeiro(rs.getBoolean("isEstrangeiro"));
+                hospede.setEstrangeiro(rs.getInt("isEstrangeiro"));
                 hospede.setQtdEstadas(rs.getInt("qtdeEstadas"));
                 hospedes.add(hospede);
             }

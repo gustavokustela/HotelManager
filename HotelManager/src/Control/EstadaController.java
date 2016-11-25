@@ -2,6 +2,8 @@ package Control;
 import DAO.EstadaDAO;
 import Model.EstadaModel;
 
+import java.util.List;
+
 public class EstadaController {
     EstadaDAO estadaDAO = new EstadaDAO();
     public void create(EstadaModel estada){
@@ -25,5 +27,9 @@ public class EstadaController {
         current.setQuarto(toNew.getQuarto());
         current.setReserva(toNew.isReserva());
         return current;
+    }
+
+    public List<EstadaModel> list(){
+        return estadaDAO.list();
     }
 }

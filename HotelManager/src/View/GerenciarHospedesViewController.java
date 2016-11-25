@@ -43,7 +43,6 @@ public class GerenciarHospedesViewController implements Initializable {
 
     @FXML
     public void loadTable(){
-        System.out.println(data.get(0).getNome());
         tableHospedes.getColumns().clear();
         nameCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, String>("nome"));
         cpfCol.setCellValueFactory(new PropertyValueFactory<HospedeModel, String>("cpf"));
