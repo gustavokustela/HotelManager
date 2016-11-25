@@ -39,16 +39,19 @@ public class RelatorioViewController {
 	
 	//Declaracao de metodos para abertura de relatorios
 	//metodo para exibicao de relatorio de hospedes cadastrados
+	@FXML
 	public void relatorioHospedes(){
 		
 	}
 	
 	//metodo para exibicao de relatorio de despesas do hospede (apos check-out)
+	@FXML
 	public void relatorioDespesas(){
 		
 	}
 	
 	//metodo para exibicao de relatorio de quartos do hotel
+	@FXML
 	public void relatorioQuartos(){
 		
 	}

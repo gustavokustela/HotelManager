@@ -35,7 +35,8 @@ public class GerenciarHospedesViewController implements Initializable {
     TableColumn sexoCol = new TableColumn("Sexo");
     TableColumn estCol = new TableColumn("Estadas");
     
-
+    
+    //metodos utilizados na tela de gerenciamento de Hospedes
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadTable();
@@ -56,6 +57,12 @@ public class GerenciarHospedesViewController implements Initializable {
         tableHospedes.getColumns().addAll(nameCol, cpfCol, rgCol, nascCol, endCol, telCol, sexoCol, estCol);
     }
     
+    @FXML
+    public void buscar(){
+    	
+    }
+    
+    //Declaracao de recursos disponiveis para a tela de Gerenciamento de Hospedes
     @FXML
     private Pane MainGerenciarHospedes;
     
