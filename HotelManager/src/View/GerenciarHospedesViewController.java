@@ -35,6 +35,7 @@ public class GerenciarHospedesViewController implements Initializable {
     TableColumn sexoCol = new TableColumn("Sexo");
     TableColumn estCol = new TableColumn("Estadas");
     
+    
     //metodos utilizados na tela de gerenciamento de Hospedes
     @Override
     public void initialize(URL location, ResourceBundle resources) {
