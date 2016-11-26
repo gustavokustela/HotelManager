@@ -9,27 +9,44 @@ public class EstadaController {
     public void create(EstadaModel estada){
         estadaDAO.create(estada);
     }
-    public EstadaModel read(Long id){
-        EstadaModel estada = estadaDAO.read(id);
-        return estada;
+    public EstadaModel read(int codHosp){
+        return estadaDAO.read(codHosp);
     }
     public void update(EstadaModel toNew){
-        EstadaModel current = read(toNew.getCodigoIdentificacao());
+        EstadaModel current = read((int) toNew.getCodigoIdentificacao());
         current = merge(current, toNew);
         estadaDAO.update(current);
     }
-    public void delete(Long id){
+    public void delete(int id){
         EstadaModel estada = read(id);
         estadaDAO.delete(estada);
     }
 
     public EstadaModel merge(EstadaModel current, EstadaModel toNew){
         current.setQuarto(toNew.getQuarto());
-        current.setReserva(toNew.isReserva());
+        current.setReserva(toNew.getReserva());
         return current;
     }
 
-    public List<EstadaModel> list(){
-        return estadaDAO.list();
+    public List<EstadaModel> listActive(){
+        return estadaDAO.listActive();
+    }
+
+    public List<EstadaModel> listAll(){ return estadaDAO.listAll(); }
+
+    public boolean isActive(int hospCod){ return estadaDAO.isActive(hospCod); }
+
+    public void checkOut(int hospCod) { estadaDAO.checkout(hospCod); }
+
+    public boolean findReserva(int hospCod) {
+        return estadaDAO.findReserva(hospCod);
+    }
+
+    public void checkInReserva(int hospCod) {
+        estadaDAO.checkInReserva(hospCod);
+    }
+
+    public boolean itsFree(String nroQuarto) {
+        return estadaDAO.itsFree(nroQuarto);
     }
 }

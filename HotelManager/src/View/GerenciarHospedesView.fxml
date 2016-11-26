@@ -8,7 +8,7 @@
 
 <Pane id="MainGerenciarHospedes" fx:id="MainGerenciarHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GerenciarHospedesViewController">
    <children>
-      <Button id="btnRealizarReserva" fx:id="btnRealizarReserva" layoutX="31.0" layoutY="594.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="193.0" text="Realizar Reserva">
+      <Button id="btnRealizarReserva" fx:id="btnRealizarReserva" layoutX="31.0" layoutY="594.0" mnemonicParsing="false" onAction="#reserva" prefHeight="63.0" prefWidth="193.0" text="Realizar Reserva">
          <graphic>
             <ImageView id="imgBtnRealReserva" fx:id="imgBtnRealReserva" fitHeight="53.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -16,7 +16,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button id="btnRealizarCheckIn" fx:id="btnRealizarCheckIn" layoutX="257.0" layoutY="593.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="199.0" text="Realizar Check-In">
+      <Button id="btnRealizarCheckIn" fx:id="btnRealizarCheckIn" layoutX="257.0" layoutY="593.0" mnemonicParsing="false" onAction="#checkIn" prefHeight="63.0" prefWidth="199.0" text="Realizar Check-In">
          <graphic>
             <ImageView id="imgBtnCheckOut" fx:id="imgBtnCheckIn" fitHeight="53.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -35,7 +35,7 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button id="btnRealizarCheckOut" fx:id="btnRealizarCheckOut" layoutX="486.0" layoutY="593.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="199.0" text="Realizar Check-Out" textOverrun="CLIP">
+      <Button id="btnRealizarCheckOut" fx:id="btnRealizarCheckOut" layoutX="486.0" layoutY="593.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="63.0" prefWidth="199.0" text="Realizar Check-Out" textOverrun="CLIP">
          <graphic>
             <ImageView id="imgBtnCheckOut" fx:id="imgBtnCheckOut" fitHeight="46.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                <image>

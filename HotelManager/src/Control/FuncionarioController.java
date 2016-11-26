@@ -9,7 +9,7 @@ public class FuncionarioController {
     public void create(FuncionarioModel funcionario){
         funcionarioDAO.create(funcionario);
     }
-    public FuncionarioModel read(Long id){
+    public FuncionarioModel read(int id){
         FuncionarioModel funcionario = funcionarioDAO.read(id);
         return funcionario;
     }
@@ -18,7 +18,7 @@ public class FuncionarioController {
         current = merge(current, toNew);
         funcionarioDAO.update(current);
     }
-    public void delete(Long id){
+    public void delete(int id){
         FuncionarioModel funcionario = read(id);
         funcionarioDAO.delete(funcionario);
     }

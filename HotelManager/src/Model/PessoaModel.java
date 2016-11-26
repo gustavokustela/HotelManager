@@ -1,6 +1,7 @@
 package Model;
 
 public class PessoaModel {
+    private int codigo;
     private String nome;
     private String cpf;
     private String RG;
@@ -8,7 +9,6 @@ public class PessoaModel {
     private String endereco;
     private String telefone;
     private String sexo;
-
     //Getters and setters
     public String getNome() {
         return nome;
@@ -64,5 +64,13 @@ public class PessoaModel {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 }

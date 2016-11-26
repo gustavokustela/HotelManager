@@ -29,7 +29,7 @@
             <Image url="@Imagens/door.png" />
          </image>
       </ImageView>
-      <Button id="btnAtualizarDados" fx:id="btnAtualizarDados" layoutX="877.0" layoutY="598.0" mnemonicParsing="false" onAction="#loadTable" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
+      <Button id="btnAtualizarDados" fx:id="btnAtualizarDados" layoutX="877.0" layoutY="598.0" mnemonicParsing="false" onAction="#updateTable" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -38,5 +38,11 @@
             </ImageView>
          </graphic>
       </Button>
+      <RadioButton id="radActive" fx:id="radActive" layoutX="105.0" layoutY="603.0" mnemonicParsing="false" onAction="#active" text="Somente ativas">
+         <toggleGroup>
+            <ToggleGroup fx:id="filter" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="radAll" fx:id="radAll" layoutX="31.0" layoutY="603.0" mnemonicParsing="false" onAction="#all" selected="true" text="Todas" toggleGroup="$filter" />
    </children>
 </Pane>
