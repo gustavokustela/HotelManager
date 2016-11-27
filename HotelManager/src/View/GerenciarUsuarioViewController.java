@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
 public class GerenciarUsuarioViewController implements Initializable{
     FuncionarioController funcionarioController = new FuncionarioController();
     private final ObservableList<FuncionarioModel> data = FXCollections.observableArrayList(funcionarioController.list());
+    TableColumn codCol = new TableColumn("Codigo");
     TableColumn nameCol = new TableColumn("Nome");
     TableColumn cpfCol = new TableColumn("CPF");
     TableColumn rgCol = new TableColumn("RG");
@@ -40,6 +41,7 @@ public class GerenciarUsuarioViewController implements Initializable{
     @FXML
     private void loadTable() {
         tableUser.getColumns().clear();
+        codCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, Integer>("codigo"));
         nameCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, String>("nome"));
         cpfCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, String>("cpf"));
         rgCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, String>("RG"));
@@ -48,9 +50,9 @@ public class GerenciarUsuarioViewController implements Initializable{
         telCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, String>("telefone"));
         sexoCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, String>("sexo"));
         salarioCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, Float>("salario"));
-        admCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, Boolean>("isAdmin"));
+        admCol.setCellValueFactory(new PropertyValueFactory<FuncionarioModel, Boolean>("admin"));
         tableUser.setItems(data);
-        tableUser.getColumns().addAll(nameCol, cpfCol, rgCol, nascCol, endCol, telCol, sexoCol, salarioCol, admCol);
+        tableUser.getColumns().addAll(codCol, nameCol, cpfCol, rgCol, nascCol, endCol, telCol, sexoCol, salarioCol, admCol);
     }
     
     @FXML

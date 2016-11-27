@@ -1,14 +1,10 @@
 package Model;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
 
 public class FuncionarioModel extends PessoaModel{
-    private long codigo;
     private float salario;
-    private int isAdmin;
+    private int admin;
     private String user;
     private String password;
 
@@ -18,13 +14,6 @@ public class FuncionarioModel extends PessoaModel{
 
     private static SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
     //Getters and setters
-    public long getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(long codigo) {
-        this.codigo = codigo;
-    }
 
     public float getSalario() {
         return salario;
@@ -35,11 +24,11 @@ public class FuncionarioModel extends PessoaModel{
     }
 
     public int isAdmin() {
-        return isAdmin;
+        return admin;
     }
 
     public void setAdmin(int admin) {
-        isAdmin = admin;
+        this.admin = admin;
     }
 
     public String getUser() {

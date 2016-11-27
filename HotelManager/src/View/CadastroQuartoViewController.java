@@ -84,9 +84,9 @@ public class CadastroQuartoViewController {
 			quarto.setQtdCamasCasal(Integer.parseInt(txtBoxQtdCasal.getText()));
 			quarto.setAreaM2(Float.parseFloat(txtBoxArea.getText()));
 			if(checkBoxSuiteEspecial.isSelected())
-				quarto.setSuiteEspecial(1);
+				quarto.setSuiteEspecial("Sim");
 			else
-				quarto.setSuiteEspecial(0);
+				quarto.setSuiteEspecial("Não");
 			quartoController.create(quarto);
 			mainCadastroDeQuartos.getChildren().clear();
 		}else{

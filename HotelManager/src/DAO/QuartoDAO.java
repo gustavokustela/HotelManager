@@ -18,7 +18,7 @@ public class QuartoDAO {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, String.valueOf(quarto.getNumero()));
             stmt.setString(2, String.valueOf(quarto.getAndar()));
-            stmt.setString(3, String.valueOf(quarto.isSuiteEspecial()));
+            stmt.setString(3, String.valueOf(quarto.getSuiteEspecial()));
             stmt.setString(4, String.valueOf(quarto.getQtdCamasSolteiro()));
             stmt.setString(5, String.valueOf(quarto.getQtdCamasCasal()));
             stmt.setString(6, String.valueOf(quarto.getAreaM2()));
@@ -31,15 +31,30 @@ public class QuartoDAO {
             e.printStackTrace();
         }
     }
-    public QuartoModel read(int id){
+    public QuartoModel read(int numQuarto){
+        QuartoModel quarto = new QuartoModel();
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
+            Statement stmt = conn.createStatement();
+            String sql = "select * from quarto where isActive=true and numero="+numQuarto;
+            ResultSet rs = stmt.executeQuery(sql);
+            if(rs.next()){
+                quarto.setNumero(rs.getInt("numero"));
+                quarto.setAndar(rs.getInt("andar"));
+                quarto.setSuiteEspecial(rs.getString("isSuiteEspecial"));
+                quarto.setQtdCamasSolteiro(rs.getInt("qtdeCamasSolteiro"));
+                quarto.setQtdCamasCasal(rs.getInt("qtdeCamasCasal"));
+                quarto.setAreaM2(rs.getFloat("areaM2"));
+                quarto.setValorDiaria(rs.getFloat("valorDiaria"));
+                quartos.add(quarto);
+            }
+            rs.close();
             dbc.closeConnection(conn);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return new QuartoModel();
+        return quarto;
     }
     public void update(QuartoModel quarto){
         DatabaseConnection dbc = new DatabaseConnection();
@@ -71,7 +86,7 @@ public class QuartoDAO {
                 QuartoModel quarto = new QuartoModel();
                 quarto.setNumero(rs.getInt("numero"));
                 quarto.setAndar(rs.getInt("andar"));
-                quarto.setSuiteEspecial(rs.getInt("isSuiteEspecial"));
+                quarto.setSuiteEspecial(rs.getString("isSuiteEspecial"));
                 quarto.setQtdCamasSolteiro(rs.getInt("qtdeCamasSolteiro"));
                 quarto.setQtdCamasCasal(rs.getInt("qtdeCamasCasal"));
                 quarto.setAreaM2(rs.getFloat("areaM2"));

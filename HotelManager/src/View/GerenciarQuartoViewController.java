@@ -41,12 +41,14 @@ public class GerenciarQuartoViewController implements Initializable{
         diariaCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Float>("valorDiaria"));
         numCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("numero"));
         andarCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("andar"));
-        suiteCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Boolean>("isSuiteEspecial"));
-        soltCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("qtdeCamasSolteiro"));
-        casalCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("qtdeCamasCasal"));
+        suiteCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, String>("suiteEspecial"));
+        soltCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("qtdCamasSolteiro"));
+        casalCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Integer>("qtdCamasCasal"));
         areaCol.setCellValueFactory(new PropertyValueFactory<QuartoModel, Float>("areaM2"));
         tableQuartos.setItems(data);
         tableQuartos.getColumns().addAll(diariaCol, numCol, andarCol, suiteCol, soltCol, casalCol, areaCol);
+        for(TableColumn column : tableQuartos.getColumns())
+            column.setStyle("-fx-alignment: CENTER;");
     }
     
     @FXML

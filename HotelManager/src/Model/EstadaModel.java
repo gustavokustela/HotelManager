@@ -6,7 +6,7 @@ public class EstadaModel {
     private int quarto;
     private String dataCheckIn;
     private String dataCheckOut;
-    private int isReserva;
+    private String reserva;
 
     //Constructor
     public EstadaModel(){}
@@ -52,23 +52,11 @@ public class EstadaModel {
         this.dataCheckOut = dataCheckOut;
     }
 
-    public int isReserva() {
-        return isReserva;
+    public String getReserva() {
+        return reserva;
     }
 
-    public void setReserva(int reserva) {
-        isReserva = reserva;
+    public void setReserva(String reserva) {
+        this.reserva = reserva;
     }
-
-    /*public double calcularDespesa(){
-        if(dataCheckOut!=null){
-            double despesa = quarto.getValorDiaria();
-            if(dataCheckOut.getDay()-dataCheckIn.getDay()>1){
-                despesa += (dataCheckOut.getDay()-dataCheckIn.getDay())*quarto.getValorDiaria();
-            }
-            return despesa;
-        } else{
-            return 0;
-        }
-    }*/
 }

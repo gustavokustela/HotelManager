@@ -127,6 +127,12 @@ public class CadastroUsuarioViewController {
 				funcionario.setAdmin(0);
 			funcionarioController.create(funcionario);
 			mainCadastroDeUsuarios.getChildren().clear();
+		}else{
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+			alert.setTitle("Atenção");
+			alert.setHeaderText(null);
+			alert.setContentText("Digite todos os campos");
+			alert.showAndWait();
 		}
 	}
 }

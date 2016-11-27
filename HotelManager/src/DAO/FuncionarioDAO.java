@@ -40,7 +40,7 @@ public class FuncionarioDAO {
             e.printStackTrace();
         }
     }
-    public FuncionarioModel read(Long id){
+    public FuncionarioModel read(int id){
         DatabaseConnection dbc = new DatabaseConnection();
         try {
             Connection conn = dbc.openConnection();
@@ -79,6 +79,7 @@ public class FuncionarioDAO {
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
                 FuncionarioModel funcionario = new FuncionarioModel();
+                funcionario.setCodigo(rs.getInt("codigoFunc"));
                 funcionario.setNome(rs.getString("nome"));
                 funcionario.setCpf(rs.getString("cpf"));
                 funcionario.setRG(rs.getString("rg"));

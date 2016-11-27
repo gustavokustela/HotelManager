@@ -3,7 +3,7 @@ package Model;
 public class QuartoModel {
     private int numero;
     private int andar;
-    private int isSuiteEspecial;
+    private String suiteEspecial;
     private int qtdCamasSolteiro;
     private int qtdCamasCasal;
     private float areaM2;
@@ -26,12 +26,12 @@ public class QuartoModel {
         this.andar = andar;
     }
 
-    public int isSuiteEspecial() {
-        return isSuiteEspecial;
+    public String getSuiteEspecial() {
+        return suiteEspecial;
     }
 
-    public void setSuiteEspecial(int suiteEspecial) {
-        isSuiteEspecial = suiteEspecial;
+    public void setSuiteEspecial(String suiteEspecial) {
+        this.suiteEspecial = suiteEspecial;
     }
 
     public int getQtdCamasSolteiro() {

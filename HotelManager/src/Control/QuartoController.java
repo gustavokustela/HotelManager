@@ -7,12 +7,11 @@ import java.util.List;
 
 public class QuartoController {
     QuartoDAO quartoDAO = new QuartoDAO();
-    public void create(QuartoModel estada){
-        quartoDAO.create(estada);
+    public void create(QuartoModel quarto){
+        quartoDAO.create(quarto);
     }
-    public QuartoModel read(int id){
-        QuartoModel estada = quartoDAO.read(id);
-        return estada;
+    public QuartoModel read(int numQuarto){
+        return quartoDAO.read(numQuarto);
     }
     public void update(QuartoModel toNew){
         QuartoModel current = read(toNew.getNumero());
@@ -20,14 +19,14 @@ public class QuartoController {
         quartoDAO.update(current);
     }
     public void delete(int id){
-        QuartoModel estada = read(id);
-        quartoDAO.delete(estada);
+        QuartoModel quarto = read(id);
+        quartoDAO.delete(quarto);
     }
 
     public QuartoModel merge(QuartoModel current, QuartoModel toNew){
         current.setNumero(toNew.getNumero());
         current.setAndar(toNew.getAndar());
-        current.setSuiteEspecial(toNew.isSuiteEspecial());
+        current.setSuiteEspecial(toNew.getSuiteEspecial());
         current.setQtdCamasSolteiro(toNew.getQtdCamasSolteiro());
         current.setQtdCamasCasal(toNew.getQtdCamasCasal());
         current.setAreaM2(toNew.getAreaM2());

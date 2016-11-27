@@ -77,6 +77,7 @@ public class HospedeDAO {
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
                 HospedeModel hospede = new HospedeModel();
+                hospede.setCodigo(rs.getInt("codigo"));
                 hospede.setNome(rs.getString("nome"));
                 hospede.setCpf(rs.getString("cpf"));
                 hospede.setRG(rs.getString("rg"));
