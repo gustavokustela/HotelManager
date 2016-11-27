@@ -8,34 +8,28 @@
 
 <Pane id="mainCadastroDeHospedes" fx:id="mainCadastroDeHospedes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastroHospedeViewController">
    <children>
-      <TextField id="txtNomeHosp" fx:id="txtNomeHosp" layoutX="34.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
       <Label id="titleCadastroDeHospedes" fx:id="titleCadastroDeHospedes" layoutX="21.0" layoutY="21.0" text="Cadastro de Hóspedes">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <TextField id="txtRgHosp" fx:id="txtRgHosp" layoutX="274.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="RG" />
-      <TextField id="txtEndLogradouroHosp" fx:id="txtEndLogradouroHosp" layoutX="34.0" layoutY="422.0" prefHeight="31.0" prefWidth="668.0" promptText="Rua, Avenida, Alamenda..." />
-      <TextField id="txtCpfHosp" fx:id="txtCpfHosp" layoutX="543.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="CPF" />
       <Label id="lblDadosPessoais" fx:id="lblDadosPessoais" layoutX="34.0" layoutY="95.0" text="Dados Pessoais" />
-      <Label id="lblDadosDeEndereco" fx:id="lblDadosDeEndereco" layoutX="34.0" layoutY="393.0" text="Dados de Endereço" />
+      <TextField id="txtNomeHosp" fx:id="txtNomeHosp" layoutX="34.0" layoutY="124.0" prefHeight="30.0" prefWidth="756.0" promptText="Nome Completo" />
       <TextField id="dtNascHosp" fx:id="txtDtNascHosp" layoutX="34.0" layoutY="168.0" prefHeight="31.0" prefWidth="206.0" promptText="Data de Nascimento" />
+      <TextField id="txtRgHosp" fx:id="txtRgHosp" layoutX="274.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="RG" />
+      <TextField id="txtCpfHosp" fx:id="txtCpfHosp" layoutX="543.0" layoutY="168.0" prefHeight="31.0" prefWidth="245.0" promptText="CPF" />
+      <TextField id="txtSexoHosp" fx:id="txtSexoHosp" layoutX="33.0" layoutY="213.0" prefHeight="31.0" prefWidth="206.0" promptText="Sexo" />
+      <CheckBox id="checkBoxIsEstrangeiroHosp" fx:id="checkBoxIsEstrangeiroHosp" layoutX="274.0" layoutY="218.0" mnemonicParsing="false" text="Hóspede Estrangeiro" />
+      <Label id="lblDadosDeContato" fx:id="lblDadosDeContato" layoutX="34.0" layoutY="272.0" text="Dados de Contato" />
+      <TextField id="txtTelHosp" fx:id="txtTelHosp" layoutX="30.0" layoutY="297.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone" />
+      <TextField id="txtEmailHosp" fx:id="txtEmailHosp" layoutX="30.0" layoutY="340.0" prefHeight="31.0" prefWidth="668.0" promptText="E-mail" />
+      <Label id="lblDadosDeEndereco" fx:id="lblDadosDeEndereco" layoutX="34.0" layoutY="393.0" text="Dados de Endereço" />
+      <TextField id="txtEndLogradouroHosp" fx:id="txtEndLogradouroHosp" layoutX="34.0" layoutY="422.0" prefHeight="31.0" prefWidth="668.0" promptText="Rua, Avenida, Alamenda..." />
       <TextField id="txtEndNrHosp" fx:id="txtEndNrHosp" layoutX="712.0" layoutY="422.0" prefHeight="31.0" prefWidth="78.0" promptText="Número" />
-      <Separator id="sepMid" fx:id="sepMid" layoutX="21.0" layoutY="375.0" prefHeight="21.0" prefWidth="790.0" />
       <TextField id="txtEndBairroHosp" fx:id="txtEndBairroHosp" layoutX="34.0" layoutY="465.0" prefHeight="31.0" prefWidth="418.0" promptText="Bairro" />
       <TextField id="txtEndCidadeHosp" fx:id="txtEndCidadeHosp" layoutX="474.0" layoutY="465.0" prefHeight="31.0" prefWidth="196.0" promptText="Cidade" />
       <TextField id="txtEndEstadoHosp" fx:id="txtEndEstadoHosp" layoutX="683.0" layoutY="465.0" prefHeight="31.0" prefWidth="111.0" promptText="Estado" />
-      <TextField id="txtSexoHosp" fx:id="txtSexoHosp" layoutX="33.0" layoutY="213.0" prefHeight="31.0" prefWidth="206.0" promptText="Sexo" />
-      <TextField id="txtTelHosp" fx:id="txtTelHosp" layoutX="30.0" layoutY="297.0" prefHeight="31.0" prefWidth="196.0" promptText="Telefone" />
-      <TextField id="txtEmailHosp" fx:id="txtEmailHosp" layoutX="30.0" layoutY="340.0" prefHeight="31.0" prefWidth="668.0" promptText="E-mail" />
-      <Separator id="sepTop" fx:id="sepTop" layoutX="17.0" layoutY="250.0" prefHeight="21.0" prefWidth="790.0" />
-      <Label id="lblDadosDeContato" fx:id="lblDadosDeContato" layoutX="34.0" layoutY="272.0" text="Dados de Contato" />
-      <ImageView id="imgIconCadastroDeHospedes" fx:id="imgIconCadastroDeHospedes" fitHeight="102.0" fitWidth="102.0" layoutX="698.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Imagens/user%20(1).png" />
-         </image>
-      </ImageView>
-      <CheckBox id="checkBoxIsEstrangeiroHosp" fx:id="checkBoxIsEstrangeiroHosp" layoutX="274.0" layoutY="218.0" mnemonicParsing="false" text="Hóspede Estrangeiro" />
+      <Button id="btnCancelCadHosp" fx:id="btnCancelCadHosp" layoutX="185.0" layoutY="525.0" mnemonicParsing="false" onAction="#cancelarCadastro" prefHeight="56.0" prefWidth="179.0" text="Cancelar" />
       <Button id="btnFinalCadHosp" fx:id="btnFinalCadHosp" layoutX="467.0" layoutY="525.0" mnemonicParsing="false" onAction="#finalizarCadastro" prefHeight="56.0" prefWidth="179.0" text="Finalizar Cadastro">
          <graphic>
             <ImageView id="imgFinalBtn" fx:id="imgFinalBtn" fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -45,8 +39,14 @@
             </ImageView>
          </graphic>
       </Button>
+      <Separator id="sepMid" fx:id="sepMid" layoutX="21.0" layoutY="375.0" prefHeight="21.0" prefWidth="790.0" />
+      <Separator id="sepTop" fx:id="sepTop" layoutX="17.0" layoutY="250.0" prefHeight="21.0" prefWidth="790.0" />
+      <ImageView id="imgIconCadastroDeHospedes" fx:id="imgIconCadastroDeHospedes" fitHeight="102.0" fitWidth="102.0" layoutX="698.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/user%20(1).png" />
+         </image>
+      </ImageView>
       <Separator id="sepBotton" fx:id="sepBotton" layoutX="21.0" layoutY="499.0" prefHeight="21.0" prefWidth="790.0" />
-      <Button id="btnCancelCadHosp" fx:id="btnCancelCadHosp" layoutX="185.0" layoutY="525.0" mnemonicParsing="false" onAction="#cancelarCadastro" prefHeight="56.0" prefWidth="179.0" text="Cancelar" />
       <ImageView id="imgCancelBtn" fx:id="imgCancelBtn" fitHeight="33.0" fitWidth="44.0" layoutX="207.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/cancel.png" />

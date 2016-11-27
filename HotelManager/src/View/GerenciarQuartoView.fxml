@@ -13,12 +13,11 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <TableView id="tableQuartos" fx:id="tableQuartos" layoutX="31.0" layoutY="152.0" prefHeight="436.0" prefWidth="1039.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
+      <ImageView id="imgGerenciarHospedes" fx:id="imgGerenciarQuartos" fitHeight="127.0" fitWidth="127.0" layoutX="929.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/door.png" />
+         </image>
+      </ImageView>
       <TextField id="txtPesquisa" fx:id="txtPesquisa" layoutX="31.0" layoutY="95.0" prefHeight="38.0" prefWidth="242.0" promptText="Número" />
       <Button id="btnBusca" fx:id="btnBusca" layoutX="290.0" layoutY="91.0" mnemonicParsing="false" onAction="#buscar" prefHeight="41.0" prefWidth="121.0" text="Buscar">
          <graphic>
@@ -29,11 +28,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <ImageView id="imgGerenciarHospedes" fx:id="imgGerenciarQuartos" fitHeight="127.0" fitWidth="127.0" layoutX="929.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Imagens/door.png" />
-         </image>
-      </ImageView>
+      <TableView id="tableQuartos" fx:id="tableQuartos" layoutX="31.0" layoutY="152.0" prefHeight="436.0" prefWidth="1039.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
       <Button id="btnAtualizarDados" fx:id="btnAtualizarDados" layoutX="877.0" layoutY="598.0" mnemonicParsing="false" onAction="#loadTable" prefHeight="63.0" prefWidth="193.0" text="Atualizar Dados">
          <graphic>
             <ImageView id="imgBtnAtlzDados" fx:id="imgBtnAtlzDados" fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
