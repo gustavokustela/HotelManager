@@ -43,11 +43,10 @@
             </ImageView>
          </graphic>
       </Button>
-      <RadioButton id="radActive" fx:id="radActive" layoutX="105.0" layoutY="603.0" mnemonicParsing="false" onAction="#active" text="Somente ativas">
+      <RadioButton id="radAll" fx:id="radAll" layoutX="31.0" layoutY="603.0" mnemonicParsing="false" onAction="#all" selected="true" text="Todas">
          <toggleGroup>
             <ToggleGroup fx:id="filter" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton id="radAll" fx:id="radAll" layoutX="31.0" layoutY="603.0" mnemonicParsing="false" onAction="#all" selected="true" text="Todas" toggleGroup="$filter" />
+         </toggleGroup></RadioButton>
+      <RadioButton id="radActive" fx:id="radActive" layoutX="105.0" layoutY="603.0" mnemonicParsing="false" onAction="#active" text="Somente ativas" toggleGroup="$filter" />
    </children>
 </Pane>
