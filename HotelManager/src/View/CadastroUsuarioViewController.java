@@ -115,7 +115,7 @@ public class CadastroUsuarioViewController {
 			funcionario.setCpf(txtBoxCpfUser.getText());
 			funcionario.setSexo(txtBoxSexoUser.getText());
 			funcionario.setTelefone(txtBoxTelefoneUser.getText());
-			funcionario.setEndereco(txtBoxUserLogin.getText() + ", " +
+			funcionario.setEndereco(txtBoxEndLougradouro.getText() + ", " +
 					txtBoxEndNumero.getText() + ", " + txtBoxEndBairro.getText() + ", " +
 					txtBoxEndCidade.getText() + ", " + txtBoxEndEstado.getText());
 			funcionario.setSalario(Float.parseFloat(txtBoxSalarioUser.getText()));
