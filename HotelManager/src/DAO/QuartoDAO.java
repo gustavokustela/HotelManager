@@ -1,6 +1,7 @@
 package DAO;
 
 import Model.FuncionarioModel;
+import Model.HospedeModel;
 import Model.QuartoModel;
 
 import java.sql.*;
@@ -100,4 +101,29 @@ public class QuartoDAO {
         }
         return quartos;
     }
+//    public List<QuartoModel> listRelatorio(){
+//        List<QuartoModel> quartos = new ArrayList<>();
+//        DatabaseConnection dbc = new DatabaseConnection();
+//        try {
+//            Connection conn = dbc.openConnection();
+//            Statement stmt = conn.createStatement();
+//            String sql = "select numero,andar,qtdeCamasSolteiro,qtdeCamasCasal,isSuiteEspecial from quarto where isActive=true";
+//            ResultSet rs = stmt.executeQuery(sql);
+//            while(rs.next()){
+//                QuartoModel quarto = new QuartoModel();
+//                quarto.setNumero(rs.getInt("numero"));
+//                quarto.setAndar(rs.getInt("andar"));
+//                quarto.setQtdCamasSolteiro(Integer.toString((rs.getInt("qtdeCamasSolteiro"))));
+//                quarto.setQtdCamasCasal(Integer.toString((rs.getInt("qtdeCamasCasal"))));
+//                quarto.setSuiteEspecial(rs.getString("isSuiteEspecial"));
+//                
+//                quartos.add(quarto);
+//            }
+//            rs.close();
+//            dbc.closeConnection(conn);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return quartos;
+//    }
 }

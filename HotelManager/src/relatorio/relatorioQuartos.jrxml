@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioEstadas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a281fd74-28fc-4610-b34c-622404a3b64a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="andar" class="java.lang.String"/>
+	<field name="qtdeCamasSolteiro" class="java.lang.String"/>
+	<field name="qtdeCamasCasal" class="java.lang.String"/>
+	<field name="isSuiteEspecial" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="17" width="478" height="46" uuid="6ec8b9b3-8890-49e3-843e-308e0025ab72"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="36" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Relatório de Quartos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="74ad8560-6627-494e-a1de-d7f367f72fa5"/>
+				<text><![CDATA[Número do Quarto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="59" height="20" uuid="d95138b3-e788-476f-8aab-3a65e794054f"/>
+				<text><![CDATA[Andar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="142" height="20" uuid="fbd391a7-ced7-431c-be34-b3177be81cf1"/>
+				<text><![CDATA[Qtde/ Camas de Solteiro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="137" height="20" uuid="e5413e10-e526-41b6-9076-ac46ac126dab"/>
+				<text><![CDATA[Qtde/ Camas de Casal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="0" width="96" height="20" uuid="ad3a3237-82f3-4bbf-b36b-82d27d18b9d6"/>
+				<text><![CDATA[Suíte Especial]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="f8738fbe-a5fb-44e1-8eae-bfa44aa2aaad"/>
+				<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="1d80625d-f211-4861-8a66-baa2a1fdcb8b"/>
+				<textFieldExpression><![CDATA[$F{andar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="100955ad-b94e-445a-85e7-8929c4f38409"/>
+				<textFieldExpression><![CDATA[$F{qtdeCamasSolteiro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="111" height="20" uuid="c06b7caf-1239-43a0-abc2-360dc29665fa"/>
+				<textFieldExpression><![CDATA[$F{qtdeCamasCasal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="111" height="20" uuid="010e6bd8-9ade-4d70-89d6-965173d2d7d3"/>
+				<textFieldExpression><![CDATA[$F{isSuiteEspecial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

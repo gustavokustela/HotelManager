@@ -65,4 +65,17 @@ public class QuartoModel {
     public void setValorDiaria(float valorDiaria) {
         this.valorDiaria = valorDiaria;
     }
+    
+    /*Testar se nao der certo remover 
+	public void setQtdCamasSolteiro(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setQtdCamasCasal(String string) {
+		// TODO Auto-generated method stub
+		
+	}*/
+
+	
 }
