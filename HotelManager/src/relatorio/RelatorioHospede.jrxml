@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioHospede" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="641778dd-7fbf-4a71-bee9-11085c5a45c1">
 	<property name="ireport.zoom" value="0.9090909090909096"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="5"/>
+	<property name="ireport.y" value="0"/>
 	<field name="nome" class="java.lang.String"/>
 	<field name="telefone" class="java.lang.String"/>
 	<background>
@@ -42,7 +42,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="131" splitType="Stretch">
+		<band height="32" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="185" height="20" uuid="7a826386-faef-4a29-991a-562dc9e21b74"/>
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
