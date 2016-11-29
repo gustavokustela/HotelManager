@@ -130,7 +130,7 @@ public class CadastroHospedeViewController {
 			mainCadastroDeHospedes.getChildren().clear();
 		}else{
 			Alert alert = new Alert(Alert.AlertType.INFORMATION);
-			alert.setTitle("Atenção");
+			alert.setTitle("Atencao");
 			alert.setHeaderText(null);
 			alert.setContentText("Digite todos os campos");
 			alert.showAndWait();

@@ -75,18 +75,24 @@ public class HospedeDAO {
 	public List<HospedeModel> listRelatorio() {
 		List<HospedeModel> hospedes = new ArrayList<>();
 		DatabaseConnection dbc = new DatabaseConnection();
+		
 		try {
 			Connection conn = dbc.openConnection();
 			Statement stmt = conn.createStatement();
-			String sql = "select nome , telefone  from hospede , pessoa  where codigoHospede = codigo and isActive = true";
+			String sql = "select nome , telefone, cpf, email, endereco  from hospede , pessoa  where codigoHospede = codigo and isActive = true";
 			ResultSet rs = stmt.executeQuery(sql);
+			
 			while (rs.next()) {
 				HospedeModel hospede = new HospedeModel();
 				hospede.setNome(rs.getString("nome"));
 				hospede.setTelefone(rs.getString("telefone"));
+				hospede.setCpf(rs.getString("cpf"));
+				hospede.setEmail(rs.getString("email"));
+				hospede.setEndereco(rs.getString("endereco"));			
 				
 				hospedes.add(hospede);
 			}
+			
 			rs.close();
 			dbc.closeConnection(conn);
 		} catch (SQLException e) {

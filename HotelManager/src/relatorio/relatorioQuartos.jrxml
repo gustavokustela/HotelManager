@@ -3,10 +3,10 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<field name="numero" class="java.lang.String"/>
-	<field name="andar" class="java.lang.String"/>
-	<field name="qtdeCamasSolteiro" class="java.lang.String"/>
-	<field name="qtdeCamasCasal" class="java.lang.String"/>
+	<field name="numero" class="java.lang.Integer"/>
+	<field name="andar" class="java.lang.Integer"/>
+	<field name="qtdeCamasSolteiro" class="java.lang.Integer"/>
+	<field name="qtdeCamasCasal" class="java.lang.Integer"/>
 	<field name="isSuiteEspecial" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
@@ -50,7 +50,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="26" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="111" height="20" uuid="f8738fbe-a5fb-44e1-8eae-bfa44aa2aaad"/>
 				<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>

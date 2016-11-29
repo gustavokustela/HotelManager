@@ -101,39 +101,39 @@ public class GerenciarHospedesViewController implements Initializable {
                             alert.showAndWait();
                         }else{
                             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                            alert.setTitle("Atenção");
+                            alert.setTitle("Atencao");
                             alert.setHeaderText(null);
-                            alert.setContentText("Quarto não cadastrado no sistema.");
+                            alert.setContentText("Quarto nao cadastrado no sistema.");
                             alert.showAndWait();
                         }
                     }else {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Atenção");
+                        alert.setTitle("Atencao");
                         alert.setHeaderText(null);
-                        alert.setContentText("Este quarto é ocupado no momento. A reserva não é permitida até o check-out do mesmo.");
+                        alert.setContentText("Este quarto ja ocupado no momento. A reserva nao e permitida ate o check-out do mesmo.");
                         alert.showAndWait();
                     }
                 }
             }else{
                 if(estadaController.findReserva(hospede.getCodigo())){
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Atenção");
+                    alert.setTitle("Atencao");
                     alert.setHeaderText(null);
-                    alert.setContentText("Este hospede já realizou uma reserva.");
+                    alert.setContentText("Este hospede ja realizou uma reserva.");
                     alert.showAndWait();
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Atenção");
+                    alert.setTitle("Atencao");
                     alert.setHeaderText(null);
-                    alert.setContentText("Este hospede já se encontra com estada ativa.");
+                    alert.setContentText("Este hospede ja se encontra com estada ativa.");
                     alert.showAndWait();
                 }
             }
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Atenção");
+            alert.setTitle("Atencao");
             alert.setHeaderText(null);
-            alert.setContentText("Você deve selecionar um hospede primeiro.");
+            alert.setContentText("Voce deve selecionar um hospede primeiro.");
             alert.showAndWait();
         }
     }
@@ -165,7 +165,7 @@ public class GerenciarHospedesViewController implements Initializable {
                             estada.setHospede(hospede.getCodigo());
                             estada.setQuarto(Integer.parseInt(result.get()));
                             estada.setDataCheckIn(format.format(new Date()));
-                            estada.setReserva("Não");
+                            estada.setReserva("Nao");
                             estadaController.create(estada);
                             Alert alert = new Alert(Alert.AlertType.INFORMATION);
                             alert.setTitle("Sucesso");
@@ -174,16 +174,16 @@ public class GerenciarHospedesViewController implements Initializable {
                             alert.showAndWait();
                         }else{
                             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                            alert.setTitle("Atenção");
+                            alert.setTitle("Atenco");
                             alert.setHeaderText(null);
-                            alert.setContentText("Quarto não cadastrado no sistema.");
+                            alert.setContentText("Quarto nao cadastrado no sistema.");
                             alert.showAndWait();
                         }
                     }else {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Atenção");
+                        alert.setTitle("Atencao");
                         alert.setHeaderText(null);
-                        alert.setContentText("O quarto está ocupado no momento.");
+                        alert.setContentText("O quarto esta ocupado no momento.");
                         alert.showAndWait();
                     }
                 }
@@ -197,17 +197,17 @@ public class GerenciarHospedesViewController implements Initializable {
                     alert.showAndWait();
                 }else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Atenção");
+                    alert.setTitle("Atencao");
                     alert.setHeaderText(null);
-                    alert.setContentText("O hospede já se encontra com estada ativa.");
+                    alert.setContentText("O hospede ja se encontra com estada ativa.");
                     alert.showAndWait();
                 }
             }
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Atenção");
+            alert.setTitle("Atencao");
             alert.setHeaderText(null);
-            alert.setContentText("Você deve selecionar um hospede primeiro.");
+            alert.setContentText("Voce deve selecionar um hospede primeiro.");
             alert.showAndWait();
         }
     }
@@ -222,7 +222,7 @@ public class GerenciarHospedesViewController implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Erro");
                     alert.setHeaderText(null);
-                    alert.setContentText("Hospede ainda não realizou o check-in na reserva!");
+                    alert.setContentText("Hospede ainda nao realizou o check-in na reserva!");
                     alert.showAndWait();
                 }else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -234,16 +234,16 @@ public class GerenciarHospedesViewController implements Initializable {
                 }
             }else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Atenção");
+                alert.setTitle("Atencao");
                 alert.setHeaderText(null);
-                alert.setContentText("Este hospede não está com estada ativa.");
+                alert.setContentText("Este hospede nao esta com estada ativa.");
                 alert.showAndWait();
             }
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Atenção");
+            alert.setTitle("Atencao");
             alert.setHeaderText(null);
-            alert.setContentText("Você deve selecionar um hospede primeiro.");
+            alert.setContentText("Voce deve selecionar um hospede primeiro.");
             alert.showAndWait();
         }
     }

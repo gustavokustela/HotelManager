@@ -5,6 +5,9 @@
 	<property name="ireport.y" value="0"/>
 	<field name="nome" class="java.lang.String"/>
 	<field name="telefone" class="java.lang.String"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="endereco" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -27,35 +30,83 @@
 		<band height="19" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="28" splitType="Stretch">
-			<staticText>
-				<reportElement x="38" y="5" width="100" height="20" uuid="c56a85bc-50f3-4e59-a0f4-796376ec4171"/>
-				<text><![CDATA[Nome do Hóspede]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="316" y="5" width="56" height="20" uuid="021cc162-98ab-4e2e-8a32-5cb4cde8013a"/>
-				<text><![CDATA[Telefone]]></text>
-			</staticText>
-			<line>
-				<reportElement x="0" y="25" width="555" height="1" uuid="c7e3fae2-80ce-4ef4-8be7-0c58e92703e7"/>
-			</line>
-		</band>
+		<band height="28" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="32" splitType="Stretch">
+		<band height="129" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="185" height="20" uuid="7a826386-faef-4a29-991a-562dc9e21b74"/>
+				<reportElement x="39" y="24" width="490" height="20" uuid="7a826386-faef-4a29-991a-562dc9e21b74"/>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="299" y="0" width="185" height="20" uuid="b836771d-f7ad-4ed6-a12e-84fee9268d05"/>
+				<reportElement x="344" y="44" width="185" height="20" uuid="b836771d-f7ad-4ed6-a12e-84fee9268d05"/>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="0" y="24" width="555" height="1" uuid="d2038209-6c14-4fcf-ba09-97efe051546c"/>
+				<reportElement x="0" y="115" width="555" height="1" uuid="d2038209-6c14-4fcf-ba09-97efe051546c"/>
 			</line>
 			<line>
-				<reportElement x="0" y="27" width="555" height="1" uuid="72d815bc-7a50-4bab-a546-d3d76c25e887"/>
+				<reportElement x="0" y="118" width="555" height="1" uuid="72d815bc-7a50-4bab-a546-d3d76c25e887"/>
+			</line>
+			<textField>
+				<reportElement x="39" y="44" width="185" height="20" uuid="a91b6af0-ae42-4e7a-8e05-0dc6bc4a1e6c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="64" width="490" height="20" uuid="8b09c204-4fa5-4b56-8b36-30bf20cd2fcc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="84" width="480" height="20" uuid="bceff326-85ff-4c6e-a90a-f56127ac95e5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="24" width="39" height="20" uuid="7dbd5475-9555-416c-93c3-f83e1ef1f475"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="44" width="39" height="20" uuid="fa3741c1-a3a1-4ff5-80e9-97a236dde401"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="84" width="49" height="20" uuid="ed59762f-5315-4bfb-9bf2-207e912cb53b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="44" width="48" height="20" uuid="505074c4-d0ae-4c1d-a0e2-b6f921379cce"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="64" width="39" height="20" uuid="bae9a2aa-bc6c-47ec-99a5-936cfc92864f"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="20" uuid="c56a85bc-50f3-4e59-a0f4-796376ec4171"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Dados do Hóspede:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="c7e3fae2-80ce-4ef4-8be7-0c58e92703e7"/>
 			</line>
 		</band>
 	</detail>

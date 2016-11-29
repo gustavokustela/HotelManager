@@ -41,14 +41,14 @@ public class PrincipalViewController {
                 principalPane.getChildren().add(no);
             }else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Atenção");
+                alert.setTitle("Atencao");
                 alert.setHeaderText(null);
-                alert.setContentText("Usuário não cadastrado");
+                alert.setContentText("Usuario nao cadastrado");
                 alert.showAndWait();
             }
         }else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Atenção");
+            alert.setTitle("Atencao");
             alert.setHeaderText(null);
             alert.setContentText("Digite todos os campos");
             alert.showAndWait();
